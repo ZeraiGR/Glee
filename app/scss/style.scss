@@ -137,9 +137,146 @@
 		&__link {
 			color: #436372;
 			letter-spacing: 1px;
+			transition: color 0.3s;
+			&:hover {
+				color: #fcd7b6;
+			}
 		}
 	}
 
+	.footer {
+		&__top {
+			padding: 75px 0 55px;
+			border-bottom: 1px solid #dae4e9;
+			display: flex;
+		}
+
+		&__contact {
+			max-width: 200px;
+			width: 100%;
+			margin-right: 100px;
+		}
+
+		&__logo {
+			margin-bottom: 25px;
+			display: block;
+		}
+
+		&__address {
+			color: $footer_link;
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+
+		&__phone,
+		&__email {
+			display: block;
+			color: $footer_link;
+			font-size: 14px;
+			line-height: 22px;
+			margin-bottom: 10px;
+			transition: color 0.3s;
+			& span {
+				text-transform: uppercase;
+			}
+			&:hover {
+				color: #fcd7b6;
+			}
+		}
+
+		&__help {
+			max-width: 170px;
+			width: 100%;
+			margin-right: 130px;
+		}
+
+		&__title {
+			color: #1f2044;
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 21px;
+			@extend %dmsans-700;
+			margin-bottom: 20px;
+			padding-top: 18px;
+			display: block;
+		}
+
+		&__subject {
+			margin-bottom: 10px;
+			line-height: 22px;
+		}
+
+		&__link {
+			color: $footer_link;
+			font-size: 14px;
+			transition: color 0.3s;
+			&:hover {
+				color: #fcd7b6;
+			}
+		}
+
+		&__text {
+			color: $footer_link;
+			font-size: 14px;
+			line-height: 24px;
+			margin-bottom: 30px;
+		}
+
+		&__bottom {
+			padding: 30px 0 35px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		&__input {
+			max-width: 170px;
+			width: 100%;
+			border: none;
+			background-color: #fef7f0;
+			padding: 10px 15px;
+			outline: transparent;
+			&::placeholder {
+				font-size: 12px;
+				color: #234969;
+				@extend %dmsans-400;
+			}
+		}
+
+		&__btn {
+			max-width: 100px;
+			margin-left: -5px;
+			border: none;
+			@extend %dmsans-400;
+			color: #fff;
+			background-color: #a3bbc8;
+			padding: 10px;
+			cursor: pointer;
+			outline: transparent;
+		}
+
+		&__copy {
+			color: $footer_link;
+			font-size: 14px;
+		}
+
+		&__lister {
+			display: flex;
+		}
+
+		&__subj + .footer__subj {
+			margin-left: 13px;
+			padding-left: 19px;
+			position: relative;
+			&::before {
+				content: "|";
+				position: absolute;
+				color: $footer_link;
+				left: 0;
+			}
+		}
+	}
 
 
 @import 'media';

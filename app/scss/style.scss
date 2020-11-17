@@ -3,7 +3,142 @@
 @import 'reset';
 @import 'global';
 
+	.header {
+		&__inner {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 50px 0;
+		}
 
+		&__user-nav {
+			display: flex;
+			align-items: center;
+		}
+
+		&__search {
+			background-image: url('../images/icons/search.svg');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			width: 16px;
+			height: 16px;
+			display: block;
+			position: relative;
+			margin-right: 38px;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				background-color: #edf1f4;
+				border-radius: 50%;
+				z-index: -1;
+				top: -100%;
+				left: -100%;
+			}
+		}
+
+		&__products {
+			background-color: #fcd7b6;
+			border-bottom-left-radius: 25px;
+			border-top-left-radius: 25px;
+			border-bottom-right-radius: 25px;
+			border-top-right-radius: 25px;
+			padding: 9px 40px 6px;
+		}
+
+		&__likes {
+			display: inline-block;
+			position: relative;
+			padding: 32px 48px 0 0;
+			border-right: 1px solid #fde7d3;
+			&::after {
+				content: "";
+				position: absolute;
+				background-image: url('../images/icons/heart.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				width: 19px;
+				height: 17px;
+				left: 0;
+				bottom: 0px;
+			}
+		}
+
+		&__cart {
+			display: inline-block;
+			position: relative;
+			padding: 32px 45px 0 0;
+			&::after {
+				content: "";
+				position: absolute;
+				background-image: url('../images/icons/cart.svg');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+				width: 18px;
+				height: 15px;
+				right: 0;
+				bottom: 0;
+			}
+		}
+
+		&__num {
+			position: absolute;
+			width: 16px;
+			height: 16px;
+			color: #243f4d;
+			@extend %dmsans-400;
+			font-size: 10px;
+			background-color: #fff;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 16px;
+			z-index: 2;
+		}
+
+		&__num-likes {
+			top: 8px;
+			left: 13px;
+		}
+
+		&__num-cart {
+			top: 9px;
+			right: -6px;
+		}
+
+		&__menu {
+			background-image: url('../images/icons/menu-btn.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			display: block;
+			width: 50px;
+			height: 50px;
+			margin-left: 17px;
+		}
+	}
+
+	.menu {
+		@extend %rubik-500;
+		font-size: 15px;
+		line-height: 12px;
+
+		&__list {
+			display: flex;
+		}
+
+		&__item+ .menu__item {
+			margin-left: 30px;
+		}
+
+		&__link {
+			color: #436372;
+			letter-spacing: 1px;
+		}
+	}
 
 
 

@@ -1,4 +1,6 @@
 $footer_link: #7b7b7b;
+$maxWidth: 1280;
+
 
 %dmsans-400 {
 	font-family: 'DMSans-Regular',
@@ -29,3 +31,10 @@ $footer_link: #7b7b7b;
 	sans-serif;
 	font-weight: 500;
 }
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	$maxWidth: $maxWidth - 320;
+	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+}
+// @include adaptiv-font(max, min);

@@ -4,21 +4,15 @@ body {
 	font-weight: 400;
 	font-style: normal;
 	background-color: #fff;
-	font-size: 18px;
-	line-height: 30px;
+	font-size: 1.125em;
+	line-height: 1.4;
 	display: flex;
 	flex-direction: column;
+	scroll-behavior: smooth;
 }
 
 .main {
 	flex-grow: 1;
-}
-
-.big-container {
-	max-width: 1800px;
-	width: 100%;
-	margin: 0 auto;
-	padding: 0 15px;
 }
 
 .container {
@@ -26,61 +20,11 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	padding: 0 15px;
+
+	&--big {
+		max-width: 1800px;
+	}
 }
 
-:focus::-webkit-input-placeholder {
-	color: transparent
-}
 
-:focus::-moz-placeholder {
-	color: transparent
-}
-
-:focus:-moz-placeholder {
-	color: transparent
-}
-
-:focus:-ms-input-placeholder {
-	color: transparent
-}
-
-input::-webkit-input-placeholder {
-	opacity: 1;
-	transition: opacity 0.3s ease;
-}
-
-input::-moz-placeholder {
-	opacity: 1;
-	transition: opacity 0.3s ease;
-}
-
-input:-moz-placeholder {
-	opacity: 1;
-	transition: opacity 0.3s ease;
-}
-
-input:-ms-input-placeholder {
-	opacity: 1;
-	transition: opacity 0.3s ease;
-}
-
-input:focus::-webkit-input-placeholder {
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-input:focus::-moz-placeholder {
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-input:focus:-moz-placeholder {
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
-
-input:focus:-ms-input-placeholder {
-	opacity: 0;
-	transition: opacity 0.3s ease;
-}
 

@@ -6,6 +6,7 @@ const {
 	series
 } = require('gulp');
 const scss = require('gulp-sass');
+const media = require('gulp-group-css-media-queries');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -28,6 +29,7 @@ function styles() {
 		.pipe(scss({
 			outputStyle: 'compressed'
 		}))
+		.pipe(media())
 		.pipe(concat('style.min.css'))
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 10 versions'],

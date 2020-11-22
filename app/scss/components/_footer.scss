@@ -74,6 +74,10 @@
 		align-items: center;
 	}
 
+	&__form {
+		display: flex;
+	}
+
 	&__input {
 		max-width: 9.444em;
 		width: 100%;
@@ -90,14 +94,11 @@
 	}
 
 	&__btn {
-		// придумать как выпилить максимальную высоту
-		max-width: 5.555em;
-		margin-left: -5px;
 		border: none;
 		@extend %dmsans-400;
 		color: #fff;
 		background-color: #a3bbc8;
-		padding: 10px;
+		padding: 0.555em;
 		cursor: pointer;
 		outline: transparent;
 	}

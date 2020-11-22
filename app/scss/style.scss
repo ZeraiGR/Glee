@@ -1,10 +1,17 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 @import 'components/header';
+@import 'home/top-slider';
+
+
+
+
 
 @import 'components/footer';
 
 @import 'media-mixin.scss';
+// Пока что не работает, при включении, не сжимает основной файл стилей

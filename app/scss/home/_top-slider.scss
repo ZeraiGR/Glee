@@ -1,0 +1,168 @@
+.top-slider {
+	&__inner {
+		background-color: #fcd7b6;
+		padding: 5.044em 5.333em 2.5em 16.666em;
+	}
+
+	&__item {
+		display: flex !important;
+		margin-bottom: 11px;
+	}
+
+	&__info {
+		margin-right: 3.277em;
+		padding-top: 6.5em;
+	}
+
+	&__title {
+		display: block;
+		max-width: 6.527em;
+		width: 100%;
+		font-size: 4.5rem;
+		line-height: 1.05;
+		margin-bottom: 0.410em;
+		color: #243f4d;
+		@extend %rubik-500;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		max-width: 20.555em;
+		color: #436372;
+		margin-bottom: 2.1em;
+	}
+
+	&__link {
+		display: inline-block;
+		background-color: #a3bbc8;
+		color: #fff;
+		padding: 1.51em 1.4em 1.2em 1.8em;
+		outline: transparent;
+		font-size: 0.9375rem;
+
+		& .icon-link {
+			margin-left: 3.8em;
+		}
+	}
+
+	&__img-box {
+		min-height: 35.555em;
+		padding-top: 10em;
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			background-image: url('../images/decor/sofa-bg.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center center;
+			width: 35em;
+			height: 35em;
+			right: -127px;
+			top: 7px;
+			z-index: -1;
+		}
+	}
+
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		padding-right: 11.444em;
+
+		li {
+			button {
+				border: none;
+				border-radius: 50%;
+				background-color: #fde3cc;
+				font-size: 0.625rem;
+				width: 3em;
+				height: 3em;
+				line-height: 3em;
+				text-align: center;
+				color: #243f4d;
+				outline: transparent;
+				cursor: pointer;
+			}
+		}
+
+		li+li {
+			margin-left: 0.666em;
+		}
+
+		.slick-active {
+			button {
+				background-color: #fff;
+			}
+		}
+	}
+
+	&__advantages {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__advantage {
+		display: flex;
+		padding: 2.444em 0.555em;
+		justify-content: center;
+		background-color: #fef7f0;
+		flex-basis: 33.333%;
+		flex-grow: 1;
+	}
+
+	&__advantage .icon {
+		fill: #a3bbc8;
+	}
+
+	&__link .icon {
+		fill: #fff;
+	}
+
+	.icon {
+		margin-right: 25px;
+	}
+
+	.icon-car {
+		margin-top: 0.722em;
+	}
+
+	&__content {
+		max-width: 13.055em;
+		position: relative;
+		width: 100%;
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: 1.111em;
+			height: 1.111em;
+			background-color: rgb(163, 187, 200);
+			opacity: 0.341;
+			border-radius: 50%;
+			top: 32px;
+			left: -40px;
+		}
+
+		&--delivery {
+			padding-top: 0.333em;
+
+			&::after {
+				top: 29px;
+			}
+		}
+	}
+
+	&__heading {
+		display: block;
+		color: #414141;
+		@extend %dmsans-700;
+		margin-bottom: 0.555em;
+	}
+
+	&__conditions {
+		color: #585858;
+		font-size: 1rem;
+		@extend %dmsans-400;
+	}
+}

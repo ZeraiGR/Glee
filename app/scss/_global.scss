@@ -26,5 +26,13 @@ body {
 	}
 }
 
+.title {
+	display: block;
+	text-align: center;
+	font-size: 2.25rem;
+	@extend %dmsans-700;
+	color: $default;
+	margin-bottom: 0.555em;
+}
 
 

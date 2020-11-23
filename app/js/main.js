@@ -3,4 +3,7 @@ $(function (params) {
 		arrows: false,
 		dots: true
 	});
+
+
+	var mixer = mixitup('.categories__products');
 });

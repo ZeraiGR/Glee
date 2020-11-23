@@ -6,12 +6,12 @@
 
 @import 'components/header';
 @import 'home/top-slider';
-
+@import 'home/categories';
 
 
 
 
 @import 'components/footer';
 
-@import 'media-mixin.scss';
+// @import 'media-mixin.scss';
 // Пока что не работает, при включении, не сжимает основной файл стилей

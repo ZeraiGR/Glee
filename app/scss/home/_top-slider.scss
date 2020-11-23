@@ -1,4 +1,5 @@
 .top-slider {
+	margin-bottom: 3.611em;
 	&__inner {
 		background-color: #fcd7b6;
 		padding: 5.044em 5.333em 2.5em 16.666em;
@@ -21,14 +22,14 @@
 		font-size: 4.5rem;
 		line-height: 1.05;
 		margin-bottom: 0.410em;
-		color: #243f4d;
+		color: $content;
 		@extend %rubik-500;
 		text-transform: uppercase;
 	}
 
 	&__text {
 		max-width: 20.555em;
-		color: #436372;
+		color: $link;
 		margin-bottom: 2.1em;
 	}
 
@@ -36,7 +37,7 @@
 		display: inline-block;
 		background-color: #a3bbc8;
 		color: #fff;
-		padding: 1.51em 1.4em 1.2em 1.8em;
+		padding: 1.51em 0 1.2em 1.8em;
 		outline: transparent;
 		font-size: 0.9375rem;
 
@@ -80,7 +81,7 @@
 				height: 3em;
 				line-height: 3em;
 				text-align: center;
-				color: #243f4d;
+				color: $content;
 				outline: transparent;
 				cursor: pointer;
 			}

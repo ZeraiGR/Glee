@@ -1,0 +1,74 @@
+.design {
+	&__products {
+		padding-top: 95px;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		row-gap: 35px;
+		column-gap: 30px;
+		margin-bottom: 120px;
+	}
+
+	&__card {
+		background-color: #f8f8f8;
+		@extend %dmsans-700;
+		min-height: 250px;
+		overflow: hidden;
+		position: relative;
+		transition: transform 0.3s;
+
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 38px 0 30px 35px;
+		display: block;
+	}
+
+	.mixitup-control-active {
+		color: $default;
+	}
+
+	&__name {
+		font-size: 20px;
+		color: $default;
+		max-width: 175px;
+		display: block;
+		margin-bottom: 10px;
+	}
+
+	&__status {
+		font-size: 1rem;
+		color: #a3bbc8;
+
+	}
+
+	&__img {
+		position: absolute;
+		left: 100px;
+		bottom: 40px;
+
+		&--chair {
+			left: 200px;
+		}
+	}
+
+	&__video {
+		min-height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

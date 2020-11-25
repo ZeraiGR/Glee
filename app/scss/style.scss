@@ -7,81 +7,106 @@
 @import 'components/header';
 @import 'home/top-slider';
 @import 'home/categories';
+@import 'home/design';
 
-.design {
-	&__products {
-		padding-top: 95px;
+.blog {
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		background-color: #fef7f0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 46vh;
+		z-index: -1;
+	}
+	
+	&__inner {
+		padding-top: 110px;
 	}
 
-	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		row-gap: 35px;
-		column-gap: 30px;
-		margin-bottom: 120px;
+	&__top-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
-	&__card {
-		background-color: #f8f8f8;
+	&__title {
+		text-align: left;
+	}
+
+	&__link {
+		color: #262626;
 		@extend %dmsans-700;
-		min-height: 250px;
-		overflow: hidden;
-		position: relative;
-		transition: transform 0.3s;
-		&:hover {
-			transform: scale(1.1);
-			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
-			0 4px 15px 0 rgba(0, 0, 0, .15);
-		}
+		font-size: 16px;
+	}
+
+	.icon-arrow {
+		margin-left: 10px;
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 90px;
+	}
+
+	&__item {
+		max-width: 370px;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&__btn {
 		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		padding: 38px 0 30px 35px;
-		display: block;
+		padding: 8px 30px;
+		background-color: #a3bbc8;
+		border-radius: 20px;
+		color: #fff;
+		text-transform: uppercase;
+		top: -35%;
+		left: 6%;
 	}
 
-	.mixitup-control-active {
-		color: $default;
-	}
-
-	&__name {
-		font-size: 20px;
-		color: $default;
-		max-width: 175px;
-		display: block;
-		margin-bottom: 10px;
-	}
-
-	&__status {
-		font-size: 1rem;
-		color: #a3bbc8;
-		
-	}
-
-	&__img {
-		position: absolute;
-		left: 100px;
-		bottom: 40px;
-
-		&--chair {
-			left: 200px;
-		}
-	}
-
-	&__video {
-		min-height: 500px;
+	&__content {
+		margin-top: 32px;
+		padding: 0 27px 0 27px;
+		position: relative;
+		flex-grow: 1;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__descr {
+		@extend %dmsans-500;
+		color: #262626;
+		padding: 0 25px 13px 0;
+	}
+
+	&__info {
+		border-top: 1px solid #e0e0e0;
+		color: #222933;
+		text-transform: uppercase;
+		font-size: 12px;
+		padding: 20px 0 25px;
+		margin-top: auto;
+	}
+
+	&__partners {
+		display: flex;
+		justify-content: space-between;
+		margin: 0 75px 0 50px;
+		padding-bottom: 90px;
+	}
+
+	&__date {
+		margin-right: 30px;
 	}
 }
-
 
 @import 'components/footer';
 

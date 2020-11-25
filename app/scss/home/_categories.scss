@@ -1,29 +1,4 @@
 .categories {
-	&__btns {
-		text-align: center;
-		margin-bottom: 4.166em;
-	}
-
-	&__btn {
-		border: none;
-		background-color: transparent;
-		padding: 0;
-		color: #8b8b8b;
-		@extend %dmsans-700;
-		font-size: 1rem;
-		transition: color 0.3s;
-		cursor: pointer;
-		outline: transparent;
-
-		&+& {
-			margin-left: 1.375em;
-		}
-
-		&:hover {
-			color: $default;
-		}
-	}
-
 	.mixitup-control-active {
 		color: $default;
 	}

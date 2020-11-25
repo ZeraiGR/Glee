@@ -46,6 +46,7 @@
 						<a class="header__icon header__icon--likes" href="#">
 							<span class="header__num header__num--likes">0</span>
 							<!-- В данном случае, я считаю, что пользоваться svg спрайтами будет неудобно, т.к сердце предоставлено в макете в формате png. Получается, мне придётся усложнять себе жизнь и искать это сердце в формате svg / Обсуждать с дизайнером этот момент и просить svg. Правильный ли ход мыслей? -->
+							<!-- Хотя нашёл сердце в этом же макете - переделаю -->
 						</a>
 						<a class="header__icon header__icon--cart" href="#">
 							<span class="header__num header__num--cart">0</span>
@@ -149,14 +150,14 @@
 
 		<section class="categories">
 			<div class="container">
-				<div class="categories__list">
+				<div class="categories__list" data-ref="container-1">
 					<span class="title">Products of the week</span>
-					<div class="categories__btns">
-						<button class="categories__btn" type="button" data-filter="all">All</button>
-						<button class="categories__btn" type="button" data-filter=".category-a">Furnitures</button>
-						<button class="categories__btn" type="button" data-filter=".category-b">Chairs</button>
-						<button class="categories__btn" type="button" data-filter=".category-c">Lighting</button>
-						<button class="categories__btn" type="button" data-filter=".category-d">Decor</button>
+					<div class="btns">
+						<button class="btns__item" type="button" data-filter="all">All</button>
+						<button class="btns__item" type="button" data-filter=".category-a">Furnitures</button>
+						<button class="btns__item" type="button" data-filter=".category-b">Chairs</button>
+						<button class="btns__item" type="button" data-filter=".category-c">Lighting</button>
+						<button class="btns__item" type="button" data-filter=".category-d">Decor</button>
 					</div>
 
 					<div class="categories__products">
@@ -365,7 +366,7 @@
 						<div class="categories__content">
 							<span class="categories__product-title">Mirum Notare Tellus</span>
 							<p class="categories__descr">LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
-							<a href="" class="categories__tap">View More
+							<a class="categories__tap" href="#">View More
 								<svg width="22" height="9" class="icon icon-link">
 									<use xlink:href="images/icons/icons.svg#Arrow-link"></use>
 								</svg>
@@ -378,7 +379,7 @@
 							<span class="categories__product-title">Malesuada Tempor
 								Euismod</span>
 							<p class="categories__descr">50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight</p>
-							<a href="" class="categories__tap">View More
+							<a class="categories__tap" href="#">View More
 								<svg width="22" height="9" class="icon icon-link">
 									<use xlink:href="images/icons/icons.svg#Arrow-link"></use>
 								</svg>
@@ -386,6 +387,86 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<section class="design">
+			<div class="container">
+				<div class="design__products" data-ref="container-2">
+					<span class="title">New Design</span>
+
+					<div class="btns">
+						<button class="btns__item" type="button" data-filter="all">All</button>
+						<button class="btns__item" type="button" data-filter=".category-1">Furnitures</button>
+						<button class="btns__item" type="button" data-filter=".category-2">Chairs</button>
+						<button class="btns__item" type="button" data-filter=".category-3">Lighting</button>
+						<button class="btns__item" type="button" data-filter=".category-4">Decor</button>
+					</div>
+
+					<div class="design__cards">
+						<div class="design__card mix category-1 category-3 category-4">
+							<a class="design__btn" href="#">
+								<span class="design__name">Beat Flat Pendant
+									Black</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img" src="images/content/products/design-1.png" alt="product images">
+							</a>
+						</div>
+
+						<div class="design__card mix category-1 category-4">
+							<a class="design__btn" href="#">
+								<span class="design__name">Lampe Sur Pieds
+									Bamboo</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img" src="images/content/products/design-2.png" alt="product images">
+							</a>
+						</div>
+
+						<div class="design__card mix category-2">
+							<a class="design__btn" href="#">
+								<span class="design__name">Rattan Rocking
+									Chair</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img design__img--chair" src="images/content/products/design-3.png"
+									alt="product images">
+							</a>
+						</div>
+
+						<div class="design__card mix category-1 category-3 category-4">
+							<a class="design__btn" href="#">
+								<span class="design__name">Rattan Rocking
+									Chair</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img" src="images/content/products/design-4.png" alt="product images">
+							</a>
+						</div>
+
+						<div class="design__card mix category-2 category-3">
+							<a class="design__btn" href="#">
+								<span class="design__name">Rattan Rocking
+									Chair</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img design__img--chair" src="images/content/products/design-5.png"
+									alt="product images">
+							</a>
+						</div>
+
+						<div class="design__card mix category-1 category-3 category-4">
+							<a class="design__btn" href="#">
+								<span class="design__name">Lampe Sur Pieds
+									Bamboo</span>
+								<p class="design__status">Classic</p>
+								<img class="design__img" src="images/content/products/design-6.png" alt="product images">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="design__video" style="background-image: url('images/decor/video-bg.jpg');">
+				<a class="design__link" href="#">
+					<img class="design__icon" src="images/icons/video-icon.png" alt="btn the play video">
+				</a>
 			</div>
 		</section>
 	</main>

@@ -3,6 +3,32 @@ $default: #191919;
 $link: #436372;
 $content: #243f4d;
 $maxWidth: 1280;
+$color: #2194E0;
+$primaryColor: #4A90E2;
+$secondColor:#0087AC;
+$hoverColor:#fcd7b6;
+$textColor: #262626;
+$textHover: #a3bbc8;
+
+@keyframes sheen {
+	0% {
+		transform: skewY(-45deg) translateX(0);
+	}
+
+	100% {
+		transform: skewY(-45deg) translateX(12.5em);
+	}
+}
+
+@keyframes annoying {
+	from {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(1.2);
+	}
+}
 
 
 %dmsans-400 {
@@ -41,3 +67,10 @@ $maxWidth: 1280;
 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 // @include adaptiv-font(max, min);
+
+@function max($numbers...) {
+	@return m#{a}x(#{$numbers});
+}
+@function min($numbers...) {
+	@return m#{i}n(#{$numbers});
+}

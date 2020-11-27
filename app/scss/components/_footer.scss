@@ -1,35 +1,29 @@
 .footer {
 	&__top {
-		padding: 4.166em 0 3.055em;
+		padding: 4.4em 0 3.4em;
 		border-bottom: 1px solid #dae4e9;
 		display: flex;
 	}
 
 	&__contact {
-		max-width: 11.111em;
+		max-width: 11.1em;
 		width: 100%;
-		margin-right: 5.555em;
+		margin-right: 5.5em;
 	}
 
 	&__logo {
-		margin-bottom: 1.388em;
 		display: block;
 	}
 
 	&__address {
+		margin-top: 1.6em;
 		font-style: normal;
 	}
 
-	&__direction {
-		color: $footer_link;
-		font-size: 0.875rem;
-		margin-bottom: 1.0714em;
-	}
-
 	&__help {
-		max-width: 9.444em;
+		max-width: 9.4em;
 		width: 100%;
-		margin-right: 7.222em;
+		margin-right: 7.2em;
 	}
 
 	&__title {
@@ -37,18 +31,18 @@
 		text-transform: uppercase;
 		font-size: 1rem;
 		@extend %dmsans-700;
-		margin-bottom: 1.25em;
-		padding-top: 1.125em;
+		margin-bottom: 1.1em;
+		padding-top: 1.1em;
 		display: block;
 	}
 
 	&__subject {
-		margin-bottom: 0.555em;
+		margin-bottom: 0.4em;
 	}
 
 	&__link {
 		color: $footer_link;
-		font-size: 0.875rem;
+		font-size: 0.87rem;
 		transition: color 0.3s;
 
 		&:hover {
@@ -56,19 +50,26 @@
 		}
 
 		&--address {
-			margin-bottom: 0.714em;
+			margin-bottom: 1em;
 			display: block;
+		}
+
+		&--direction {
+			margin-bottom: 1.3em;
+			&:hover {
+				color: $footer_link;
+			}
 		}
 	}
 
 	&__text {
 		color: $footer_link;
-		font-size: 0.875rem;
-		margin-bottom: 2.142em;
+		font-size: 0.87rem;
+		margin-bottom: 2.8em;
 	}
 
 	&__bottom {
-		padding: 1.666em 0 1.944em;
+		padding: 1.6em 0 1.9em;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -79,18 +80,27 @@
 	}
 
 	&__input {
-		max-width: 9.444em;
+		max-width: 9.4em;
 		width: 100%;
 		border: none;
 		background-color: #fef7f0;
-		padding: 0.555em 0.833em;
+		padding: 0.5em 0.8em;
 		outline: transparent;
+		transition: box-shadow 0.4s;
 
 		&::placeholder {
 			font-size: 0.75rem;
 			color: #234969;
 			@extend %dmsans-400;
 		}
+
+		&:hover {
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	&__label {
+		font-size: 0;
 	}
 
 	&__btn {
@@ -98,14 +108,23 @@
 		@extend %dmsans-400;
 		color: #fff;
 		background-color: #a3bbc8;
-		padding: 0.555em;
+		padding: 0.5em;
 		cursor: pointer;
 		outline: transparent;
+		transition: box-shadow 0.4s;
+		&:focus,
+		&:active {
+			background-color: $color;
+			color: #fff;
+		}
+		&:hover {
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+		} 
 	}
 
 	&__copy {
 		color: $footer_link;
-		font-size: 0.875rem;
+		font-size: 0.87rem;
 	}
 
 	&__lister {
@@ -115,8 +134,8 @@
 	&__subj {
 		& + & {
 			position: relative;
-			padding-left: 1.055em;
-			margin-left: 0.722em;
+			padding-left: 1em;
+			margin-left: 0.7em;
 		}
 
 		&::before {

@@ -1,0 +1,151 @@
+.blog {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		background-color: #fef7f0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 48vh;
+		z-index: -1;
+	}
+
+	&__inner {
+		padding-top: 6.1em;
+	}
+
+	&__top-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.1em;
+	}
+
+	&__title {
+		text-align: left;
+	}
+
+	&__link {
+		color: $textColor;
+		@extend %dmsans-700;
+		font-size: 1rem;
+		transition: color 0.3s;
+
+		&:hover {
+			color: #fcd7b6;
+
+			.icon-arrow {
+				transform: translateX(0.3em);
+			}
+		}
+
+		.icon-arrow {
+			margin-left: 0.625em;
+			transition: transform ease-out 0.5s;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 5em;
+	}
+}
+
+.blog-item {
+	max-width: 20.5em;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	&__btn {
+		font-family: 'Poppins-Bold';
+		font-size: 0.875rem;
+		border: 2px solid #a3bbc8;
+		transition: all 0.2s ease-in-out;
+		overflow: hidden;
+		position: absolute;
+		padding: 0.28em 2.14em;
+		background-color: #a3bbc8;
+		border-radius: 1.42em;
+		color: #fff;
+		text-transform: uppercase;
+		top: -34%;
+		left: 7.5%;
+
+		&:before {
+			content: "";
+			background-color: rgba(255, 255, 255, 0.5);
+			height: 100%;
+			width: 3em;
+			display: block;
+			position: absolute;
+			top: 0;
+			left: -4.5em;
+			transform: skewX(-45deg) translateX(0);
+			transition: none;
+		}
+
+		&:focus {
+			background-color: $color;
+		}
+
+		&:hover {
+			background-color: $color;
+			color: #fff;
+			border-bottom: 4px solid darken(#a3bbc8, 10%);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+
+			&:before {
+				transform: skewX(-45deg) translateX(13.5em);
+				transition: all 0.5s ease-in-out;
+			}
+		}
+
+		&:active {
+			background-color: #feefe2;
+		}
+	}
+
+	&__content {
+		margin-top: 1.77em;
+		padding: 0 1.5em 0 1.5em;
+		position: relative;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	&__descr {
+		@extend %dmsans-500;
+		color: $textColor;
+		padding: 0 0.83em 0.72em 0;
+		font-size: 1.125rem;
+		line-height: 1.25;
+	}
+
+	&__info {
+		border-top: 1px solid #e0e0e0;
+		color: #222933;
+		text-transform: uppercase;
+		font-size: 0.75rem;
+		padding: 1.41em 0 2.08em;
+		margin-top: auto;
+	}
+
+	&__date {
+		margin-right: 1.6em;
+	}
+}
+
+.blog-partners {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 4.16em 0 2.77em;
+	padding-bottom: 5em;
+}

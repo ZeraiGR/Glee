@@ -6,7 +6,6 @@ const {
 	series
 } = require('gulp');
 const scss = require('gulp-sass');
-const media = require('gulp-group-css-media-queries');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -29,7 +28,6 @@ function styles() {
 		.pipe(scss({
 			outputStyle: 'compressed'
 		}))
-		// .pipe(media())
 		.pipe(concat('style.min.css'))
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 10 versions'],
@@ -44,6 +42,7 @@ function scripts() {
 			'node_modules/jquery/dist/jquery.js',
 			'node_modules/slick-carousel/slick/slick.js',
 			'node_modules/mixitup/dist/mixitup.min.js',
+			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
 			'app/js/main.js'
 		])
 		.pipe(concat('main.min.js'))

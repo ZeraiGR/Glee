@@ -56,10 +56,6 @@ a:not([class]) {
 	text-decoration-skip-ink: auto;
 }
 
-article>*+* {
-	margin-top: 1em;
-}
-
 // Стандартное поведение инпутов с исчезновением текста при клике для удобства юзабилити
 :focus::-webkit-input-placeholder {
 	color: transparent

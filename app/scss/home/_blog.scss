@@ -60,6 +60,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
 
 	&__btn {
 		font-family: 'Poppins-Bold';
@@ -73,7 +74,7 @@
 		border-radius: 1.42em;
 		color: #fff;
 		text-transform: uppercase;
-		top: -34%;
+		top: 234px;
 		left: 7.5%;
 
 		&:before {
@@ -114,7 +115,6 @@
 	&__content {
 		margin-top: 1.77em;
 		padding: 0 1.5em 0 1.5em;
-		position: relative;
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
@@ -136,10 +136,36 @@
 		font-size: 0.75rem;
 		padding: 1.41em 0 2.08em;
 		margin-top: auto;
+		display: flex;
 	}
 
 	&__date {
 		margin-right: 1.6em;
+		color: #222933;
+		transition: color 0.3s;
+		.icon {
+			transition: fill 0.3s;
+		}
+		&:hover {
+			color: #2194E0;
+			.icon {
+				fill: #2194E0;
+			}
+		}
+	}
+
+	&__author {
+		color: #222933;
+		transition: color 0.3s;
+		.icon {
+			transition: fill 0.3s;
+		}
+		&:hover {
+			color: #2194E0;
+			.icon {
+				fill: #2194E0;
+			}
+		}
 	}
 }
 

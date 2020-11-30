@@ -25,12 +25,20 @@
 		color: $content;
 		@extend %rubik-500;
 		text-transform: uppercase;
+		overflow: hidden;
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
 	}
 
 	&__text {
 		max-width: 20.555em;
 		color: $link;
 		margin-bottom: 2.1em;
+		overflow: hidden;
+		-webkit-line-clamp: 7;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
 	}
 
 	&__link {
@@ -82,22 +90,14 @@
 
 	&__img-box {
 		min-height: 35.5em;
-		padding-top: 10em;
 		position: relative;
+		max-height: 600px;
+		max-width: 760px;
+	}
 
-		&::after {
-			content: "";
-			position: absolute;
-			background-image: url('../images/decor/sofa-bg.png');
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center center;
-			width: 35em;
-			height: 35em;
-			right: -7.05em;
-			top: 0.38em;
-			z-index: -1;
-		}
+	&__img {
+		object-fit: cover;
+		height: 100%;
 	}
 
 	.slick-dots {
@@ -193,12 +193,20 @@
 		color: #414141;
 		@extend %dmsans-700;
 		margin-bottom: 0.55em;
+		overflow: hidden;
+		-webkit-line-clamp: 2;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
 	}
 
 	&__conditions {
 		color: #585858;
 		font-size: 1rem;
 		@extend %dmsans-400;
+		overflow: hidden;
+		-webkit-line-clamp: 4;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
 	}
 }
 

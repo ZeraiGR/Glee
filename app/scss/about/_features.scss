@@ -1,0 +1,77 @@
+.features {
+	background-color: $hoverColor;
+	padding: 85px 0 80px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@extend %dmsans-700;
+		color: $content;
+		text-align: center;
+	}
+
+	&__box {
+		position: relative;
+
+		.icon {
+			position: relative;
+			z-index: 2;
+			fill: $content;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			background-color: $textHover;
+			border-radius: 50%;
+			width: 35px;
+			height: 35px;
+			right: 0;
+			bottom: 0;
+		}
+
+		&--graph {
+			&::after {
+				right: -12px;
+				bottom: 6px;
+			}
+		}
+
+		&--car {
+			&::after {
+				right: -8px;
+				bottom: -5px;
+			}
+		}
+
+		&--phone {
+			&::after {
+				right: -12px;
+				bottom: 10px;
+			}
+		}
+	}
+
+	&__num {
+		font-size: 36px;
+		margin: 15px 0 5px;
+		max-width: 300px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__name {
+		max-width: 350px;
+		overflow: hidden;
+		-webkit-line-clamp: 3;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+}

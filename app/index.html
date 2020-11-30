@@ -90,7 +90,7 @@
 								<span class="top-slider__title">Smart and trendy</span>
 								<p class="top-slider__text">Dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
 									incididunt </p>
-								<a class="top-slider__link" href="#">Shop Now
+								<a class="button button--slider" href="#">Shop Now
 									<svg width="22" height="9" class="icon icon-link">
 										<use xlink:href="images/icons/icons.svg#Arrow-link"></use>
 									</svg>
@@ -174,18 +174,19 @@
 			<div class="container">
 				<div class="categories__list" data-ref="container-1">
 					<h2 class="title">Products of the week</h2>
-					<div class="btns">
-						<button class="btns__item" type="button" data-filter="all">All</button>
-						<button class="btns__item" type="button" data-filter=".category-a">Furnitures</button>
-						<button class="btns__item" type="button" data-filter=".category-b">Chairs</button>
-						<button class="btns__item" type="button" data-filter=".category-c">Lighting</button>
-						<button class="btns__item" type="button" data-filter=".category-d">Decor</button>
+					<div class="filter-btns">
+						<button class="filter-btns__item" type="button" data-filter="all">All</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-a">Furnitures</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-b">Chairs</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-c">Lighting</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-d">Decor</button>
 					</div>
 
 					<div class="categories__products">
-						<article class="product-card categories__item mix category-b" href="#">
-							<img class="product-card__img" src="images/content/products/1.png" alt="product item">
-
+						<article class="product-card mix category-b" href="#">
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/1.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -209,8 +210,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-b category-c" href="#">
-							<img class="product-card__img" src="images/content/products/2.png" alt="product item">
-
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/2.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -234,8 +236,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-b category-c" href="#">
-							<img class="categories__img" src="images/content/products/3.png" alt="product item">
-
+							<div class="product-card__box">
+								<img class="categories__img" src="images/content/products/3.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -259,7 +262,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-b category-d" href="#">
-							<img class="product-card__img" src="images/content/products/4.png" alt="product item">
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/4.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -282,8 +287,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-b" href="#">
-							<img class="product-card__img" src="images/content/products/5.png" alt="product item">
-
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/5.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -307,8 +313,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-b category-d" href="#">
-							<img class="product-card__img" src="images/content/products/6.png" alt="product item">
-
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/6.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -332,8 +339,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-a category-d" href="#">
-							<img class="product-card__img" src="images/content/products/7.png" alt="product item">
-
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/7.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -357,7 +365,9 @@
 						</article>
 
 						<article class="product-card categories__item mix category-a category-c" href="#">
-							<img class="product-card__img" src="images/content/products/8.png" alt="product item">
+							<div class="product-card__box">
+								<img class="product-card__img" src="images/content/products/8.png" alt="product item">
+							</div>
 							<div class="product-card__hover-links">
 								<a class="product-card__link" href="#">
 									<svg width="20" height="20" class="icon icon-search">
@@ -384,12 +394,14 @@
 			<div class="container container--big">
 				<div class="categories__products-more">
 					<article class="product-slip">
-						<img class="product-slip__images" src="images/content/products/product-more-1.png"
-							alt="product images">
+						<div class="product-slip__box">
+							<img class="product-slip__images" src="images/content/products/product-more-1.png"
+								alt="product images">
+						</div>
 						<div class="product-slip__content">
 							<h3 class="product-slip__product-title">Mirum Notare Tellus</h3>
 							<p class="product-slip__descr">LEDCornBulb Lamp 5W 7W 10W 12W 15W E26 E27LEDCornLight</p>
-							<a class="product-slip__tap" href="#">View More
+							<a class="button button--categories" href="#">View More
 								<svg width="22" height="9" class="icon icon-link">
 									<use xlink:href="images/icons/icons.svg#Arrow-link"></use>
 								</svg>
@@ -397,14 +409,16 @@
 						</div>
 					</article>
 					<article class="product-slip">
-						<img class="product-slip__images" src="images/content/products/product-more-2.png"
-							alt="product images">
+						<div class="product-slip__box">
+							<img class="product-slip__images" src="images/content/products/product-more-2.png"
+								alt="product images">
+						</div>
 						<div class="product-slip__content product-slip__content--fixed">
 							<h3 class="product-slip__product-title">Malesuada Tempor
 								Euismod</h3>
 							<p class="product-slip__descr">50W 8000lm Compact Size for HID StreetLightReplacementLEDCornLight
 							</p>
-							<a class="product-slip__tap" href="#">View More
+							<a class="button button--categories" href="#">View More
 								<svg width="22" height="9" class="icon icon-link">
 									<use xlink:href="images/icons/icons.svg#Arrow-link"></use>
 								</svg>
@@ -420,12 +434,12 @@
 				<div class="design__products" data-ref="container-2">
 					<h2 class="title">New Design</h2>
 
-					<div class="btns">
-						<button class="btns__item" type="button" data-filter="all">All</button>
-						<button class="btns__item" type="button" data-filter=".category-a">Furnitures</button>
-						<button class="btns__item" type="button" data-filter=".category-b">Chairs</button>
-						<button class="btns__item" type="button" data-filter=".category-c">Lighting</button>
-						<button class="btns__item" type="button" data-filter=".category-d">Decor</button>
+					<div class="filter-btns">
+						<button class="filter-btns__item" type="button" data-filter="all">All</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-a">Furnitures</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-b">Chairs</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-c">Lighting</button>
+						<button class="filter-btns__item" type="button" data-filter=".category-d">Decor</button>
 					</div>
 
 					<div class="design__cards">
@@ -525,11 +539,11 @@
 										veniam</h3>
 								</a>
 								<div class="blog-item__info">
-									<a class="blog-item__date" href="#">
+									<time class="blog-item__date">
 										<svg width="14" height="14" class="icon">
 											<use xlink:href="images/icons/icons.svg#calendar"></use>
 										</svg>
-										28 january, 2020</a>
+										28 january, 2020</time>
 									<a class="blog-item__author" href="#">
 										<svg width="16" height="14" class="icon">
 											<use xlink:href="images/icons/icons.svg#user"></use>
@@ -553,11 +567,11 @@
 										dolore </h3>
 								</a>
 								<div class="blog-item__info">
-									<a class="blog-item__date" href="#">
+									<time class="blog-item__date">
 										<svg width="14" height="14" class="icon">
 											<use xlink:href="images/icons/icons.svg#calendar"></use>
 										</svg>
-										28 january, 2020</a>
+										28 january, 2020</time>
 									<a class="blog-item__author" href="#">
 										<svg width="16" height="14" class="icon">
 											<use xlink:href="images/icons/icons.svg#user"></use>
@@ -577,11 +591,12 @@
 									<h3 class="blog-item__descr">Rncididunt ut labore et dolore magna aliqua. Ut enim </h3>
 								</a>
 								<div class="blog-item__info">
-									<a class="blog-item__date" href="#">
-										<svg width="14" height="14" class="icon">
-											<use xlink:href="images/icons/icons.svg#calendar"></use>
+									<time class="blog-item__date"">
+										<svg width=" 14" height="14" class="icon">
+										<use xlink:href="images/icons/icons.svg#calendar"></use>
 										</svg>
-										28 january, 2020</a>
+										28 january, 2020
+									</time>
 									<a class="blog-item__author" href="#">
 										<svg width="16" height="14" class="icon">
 											<use xlink:href="images/icons/icons.svg#user"></use>
@@ -593,12 +608,24 @@
 						</article>
 					</div>
 
-					<div class="blog-partners">
-						<img class="blog-partners__images" src="images/content/partners/logo-1.png" alt="partners logo">
-						<img class="blog-partners__images" src="images/content/partners/logo-2.png" alt="partners logo">
-						<img class="blog-partners__images" src="images/content/partners/logo-3.png" alt="partners logo">
-						<img class="blog-partners__images" src="images/content/partners/logo-4.png" alt="partners logo">
-						<img class="blog-partners__images" src="images/content/partners/logo-5.png" alt="partners logo">
+					<div class="partners">
+						<ul class="partners__list">
+							<li class="partners__item">
+								<img class="partners__images" src="images/content/partners/logo-1.png" alt="partners logo">
+							</li>
+							<li class="partners__item">
+								<img class="partners__images" src="images/content/partners/logo-2.png" alt="partners logo">
+							</li>
+							<li class="partners__item">
+								<img class="partners__images" src="images/content/partners/logo-3.png" alt="partners logo">
+							</li>
+							<li class="partners__item">
+								<img class="partners__images" src="images/content/partners/logo-4.png" alt="partners logo">
+							</li>
+							<li class="partners__item">
+								<img class="partners__images" src="images/content/partners/logo-5.png" alt="partners logo">
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>

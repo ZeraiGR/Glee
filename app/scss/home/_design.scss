@@ -4,12 +4,14 @@
 	}
 
 	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		row-gap: 1.5em;
-		column-gap: 1.6em;
+		// display: grid;
+		// grid-template-columns: repeat(3, 1fr);
+		// grid-template-rows: repeat(2, 1fr);
+		// row-gap: 1.5em;
+		// column-gap: 1.6em;
 		margin-bottom: 6.5em;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	.mixitup-control-active {
@@ -17,90 +19,3 @@
 	}
 }
 
-.design-card {
-	background-color: #f8f8f8;
-	@extend %dmsans-700;
-	min-height: 13.88em;
-	overflow: hidden;
-	position: relative;
-	transition: transform 0.3s;
-
-	&:hover {
-		transform: scale(1.1);
-		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
-			0 4px 15px 0 rgba(0, 0, 0, .15);
-	}
-
-	&__btn {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		padding: 2.1em 0 1.66em 1.94em;
-		display: block;
-	}
-
-	&__name {
-		font-size: 1.25rem;
-		color: $default;
-		max-width: 8.75em;
-		display: block;
-		margin-bottom: 0.6em;
-		line-height: 1.2;
-	}
-
-	&__status {
-		font-size: 1rem;
-		color: #a3bbc8;
-	}
-
-	&__img {
-		position: absolute;
-		left: 5.55em;
-		bottom: 2.22em;
-		&--chair {
-			left: 11.1em;
-		}
-	}
-}	
-
-.design-video {
-	min-height: 27.7em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: top center;
-
-	&__link {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 7.22em;
-		height: 7.22em;
-		border-radius: 50%;
-		border: 15px solid rgba(163, 187, 200, .4);
-		background: radial-gradient(circle at center, #a3bbc8 10px, rgba(163, 187, 200, 1) 10px);
-		background-clip: padding-box;
-		box-shadow: 0 0 15px rgba(255, 255, 255, .4);
-		transform-origin: center;
-		animation: annoying .4s ease-in infinite alternate;
-		transition: all 0.3s;
-
-		.icon-play {
-			fill: #fff;
-		}
-
-		&:hover {
-			.icon-play {
-				fill: #feefe2;
-			}
-		}
-
-		&:active {
-			border: 15px solid rgba(254, 239, 226, 1);
-		}
-	}
-}

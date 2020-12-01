@@ -1,0 +1,61 @@
+.design-card {
+	max-width: 20.5em;
+	width: 100%;
+	margin-bottom: 30px;
+
+	&:nth-child(3n+2) {
+		margin: 0 30px;
+	}
+
+	&__inner {
+		overflow: hidden;
+		position: relative;
+		@extend %dmsans-700;
+		min-height: 13.88em;
+		background-size: cover;
+		transition: transform 0.3s;
+		background-color: #f8f8f8;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+			0 4px 15px 0 rgba(0, 0, 0, .15);
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 2.1em 0 1.66em 1.94em;
+		display: block;
+	}
+
+	&__name {
+		font-size: 1.25rem;
+		color: $default;
+		max-width: 8.75em;
+		display: block;
+		margin-bottom: 0.6em;
+		line-height: 1.2;
+	}
+
+	&__status {
+		font-size: 1rem;
+		color: #a3bbc8;
+	}
+
+	&__img {
+		position: absolute;
+		left: 5.55em;
+		bottom: 2.22em;
+
+		&--chair {
+			left: 11.1em;
+		}
+	}
+}

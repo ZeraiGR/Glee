@@ -17,9 +17,10 @@
 		justify-content: center;
 		transform-origin: center;
 		background-clip: padding-box;
-		border: 15px solid rgba(163, 187, 200, .4);
+		border: 15px solid rgba(203, 214, 219, 0.4);
+		box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+		// Слетела прозрачность почему-то...
 		animation: annoying .4s ease-in infinite alternate;
-		box-shadow: 0 0 15px rgba(255, 255, 255, .4);
 		background: radial-gradient(circle at center, #a3bbc8 10px, rgba(163, 187, 200, 1) 10px);
 
 		.icon-play {

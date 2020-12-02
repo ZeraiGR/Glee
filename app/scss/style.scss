@@ -1,25 +1,33 @@
-@import 'vars';
-@import 'mixins';
-@import 'fonts';
-@import 'reset';
-@import 'libs';
-@import 'global';
+@import 'base/vars';
+@import 'base/keyframes';
+@import 'base/mixins';
+@import 'base/fonts';
+@import 'base/reset';
+@import 'base/libs';
+@import 'base/global';
 
+
+// main page
 @import 'components/header';
 @import 'home/top-slider';
+@import 'home/advantages';
 @import 'home/categories';
 @import 'components/product-card';
+@import 'components/product-slip';
 @import 'home/design';
 @import 'components/design-card';
 @import 'home/video';
 @import 'home/blog';
+@import 'components/blog-item';
+@import 'home/partners';
 @import 'components/footer';
 
 
+// about page
 @import 'components/breadcrumbs';
 @import 'about/portfolio';
 @import 'about/features';
-
+@import 'about/team';
 @import 'components/team-card';
 
 

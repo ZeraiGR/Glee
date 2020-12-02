@@ -1,0 +1,53 @@
+.team {
+	padding-top: 6.6em;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__sidebar {
+		width: 100%;
+		max-width: 16.6em;
+	}
+
+	&__title {
+		color: $content;
+		overflow: hidden;
+		font-size: 2.25rem;
+		@extend %dmsans-700;
+		display: -webkit-box;
+		margin-bottom: 0.41em;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
+
+	&__text {
+		color: $content;
+		overflow: auto;
+		font-size: 1rem;
+		max-height: 56em;
+		line-height: 1.8;
+		margin-bottom: 1.6em;
+
+		&::-webkit-scrollbar {
+			width: 6px;
+			background: $hoverColor;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: #1f2044;
+		}
+
+		&::-webkit-scrollbar-track {
+			-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+		}
+	}
+
+	&__cards {
+		max-width: 770px;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}

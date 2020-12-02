@@ -4,125 +4,15 @@
 	}
 
 	&__products {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		grid-template-rows: repeat(2, 1fr);
-		row-gap: 2.2em;
-		column-gap: 1.6em;
+		display: flex;
+		flex-wrap: wrap;
 		margin-bottom: 10.27em;
+		margin: 0 -0.84em 10.27em;
 	}
 
 	&__products-more {
 		display: flex;
 		justify-content: space-between;
-	}
-}
-
-
-
-.product-slip {
-	background-color: #feefe2;
-	padding: 4.4em 0 4.4em 13.8em;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-grow: 1;
-	max-height: 390px;
-
-	&+& {
-		margin-left: 1.6em;
-	}
-
-	&__box {
-		max-width: 240px;
-		max-height: 420px;
-		position: absolute;
-		bottom: 4.44em;
-		left: 8.16em;
-		overflow: hidden;
-	}
-
-	&__images {
-		object-fit: cover;
-		height: 100%;
-	}
-
-	&__content {
-		max-width: 18.8em;
-		color: $content;
-
-		&--fixed {
-			padding-left: 2.2em;
-		}
-	}
-
-	&__product-title {
-		display: block;
-		font-size: 1.6rem;
-		@extend %dmsans-700;
-		line-height: 1.2;
-		margin-bottom: 0.96em;
-		overflow: hidden;
-		-webkit-line-clamp: 3;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-	}
-
-	&__descr {
-		font-size: 1rem;
-		margin-bottom: 1.87em;
-		line-height: 1.7;
-		overflow: hidden;
-		-webkit-line-clamp: 4;
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-	}
-
-	&__tap {
-		display: inline-block;
-		border-radius: 0.26em;
-		border: 1px solid #b3b7b5;
-		padding: 1.3em 1em;
-		color: $link;
-		font-size: 0.93rem;
-		position: relative;
-		z-index: 1;
-		transition: all 300ms ease;
-
-		.icon-link {
-			fill: $link;
-			margin-left: 3.5em;
-		}
-
-		&:before {
-			position: absolute;
-			content: '';
-			width: 0%;
-			height: 100%;
-			background-color: $textHover;
-			top: 0;
-			left: auto;
-			right: 0;
-			transition: all 300ms ease;
-			z-index: -1;
-		}
-
-		&:hover {
-			color: #fff;
-
-			&:before {
-				position: absolute;
-				content: '';
-				width: 100%;
-				height: 100%;
-				background-color: $textHover;
-				top: 0;
-				left: 0;
-				right: 0;
-				z-index: -1;
-			}
-		}
 	}
 }
 

@@ -1,11 +1,7 @@
 .design-card {
-	max-width: 20.5em;
 	width: 100%;
-	margin-bottom: 30px;
-
-	&:nth-child(3n+2) {
-		margin: 0 30px;
-	}
+	max-width: 20.5em;
+	margin: 0 0.83em 1.6em;
 
 	&__inner {
 		overflow: hidden;
@@ -17,12 +13,11 @@
 		background-color: #f8f8f8;
 		background-repeat: no-repeat;
 		background-position: center center;
-	}
-
-	&:hover {
-		transform: scale(1.1);
-		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
-			0 4px 15px 0 rgba(0, 0, 0, .15);
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 5px 11px 0 rgba(0, 0,0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+		}
 	}
 
 	&__btn {
@@ -31,17 +26,17 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		padding: 2.1em 0 1.66em 1.94em;
 		display: block;
+		padding: 2.1em 0 1.66em 1.94em;
 	}
 
 	&__name {
-		font-size: 1.25rem;
-		color: $default;
-		max-width: 8.75em;
 		display: block;
-		margin-bottom: 0.6em;
+		color: $default;
 		line-height: 1.2;
+		max-width: 8.75em;
+		font-size: 1.25rem;
+		margin-bottom: 0.6em;
 	}
 
 	&__status {
@@ -50,9 +45,9 @@
 	}
 
 	&__img {
-		position: absolute;
 		left: 5.55em;
 		bottom: 2.22em;
+		position: absolute;
 
 		&--chair {
 			left: 11.1em;

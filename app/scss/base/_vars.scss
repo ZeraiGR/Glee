@@ -10,27 +10,6 @@ $hoverColor:#fcd7b6;
 $textColor: #262626;
 $textHover: #a3bbc8;
 
-@keyframes sheen {
-	0% {
-		transform: skewY(-45deg) translateX(0);
-	}
-
-	100% {
-		transform: skewY(-45deg) translateX(12.5em);
-	}
-}
-
-@keyframes annoying {
-	from {
-		transform: scale(1);
-	}
-
-	to {
-		transform: scale(1.2);
-	}
-}
-
-
 %dmsans-400 {
 	font-family: 'DMSans-Regular',
 	sans-serif;
@@ -49,6 +28,12 @@ $textHover: #a3bbc8;
 	font-weight: 700;
 }
 
+%rubik-300 {
+	font-family: 'Rubik-Light',
+		sans-serif;
+	font-weight: 300;
+}
+
 %rubik-400 {
 	font-family: 'Rubik-Regular',
 	sans-serif;
@@ -61,12 +46,11 @@ $textHover: #a3bbc8;
 	font-weight: 500;
 }
 
-@mixin adaptiv-font($pcSize, $mobSize) {
-	$addSize: $pcSize - $mobSize;
-	$maxWidth: $maxWidth - 320;
-	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+%rubik-700 {
+	font-family: 'Rubik-Bold',
+		sans-serif;
+	font-weight: 700;
 }
-// @include adaptiv-font(max, min);
 
 @function max($numbers...) {
 	@return m#{a}x(#{$numbers});

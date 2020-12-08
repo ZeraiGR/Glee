@@ -2,7 +2,7 @@ $footer_link: #7b7b7b;
 $default: #191919;
 $link: #436372;
 $content: #243f4d;
-$maxWidth: 1280;
+$maxWidth: 1790;
 $color: #2194E0;
 $primaryColor: #4A90E2;
 $secondColor:#0087AC;
@@ -12,19 +12,19 @@ $textHover: #a3bbc8;
 
 %dmsans-400 {
 	font-family: 'DMSans-Regular',
-	sans-serif;
+		sans-serif;
 	font-weight: 400;
 }
 
 %dmsans-500 {
 	font-family: 'DMSans-Medium',
-	sans-serif;
+		sans-serif;
 	font-weight: 500;
 }
 
 %dmsans-700 {
 	font-family: 'DMSans-Bold',
-	sans-serif;
+		sans-serif;
 	font-weight: 700;
 }
 
@@ -36,13 +36,13 @@ $textHover: #a3bbc8;
 
 %rubik-400 {
 	font-family: 'Rubik-Regular',
-	sans-serif;
+		sans-serif;
 	font-weight: 400;
 }
 
 %rubik-500 {
 	font-family: 'Rubik-Medium',
-	sans-serif;
+		sans-serif;
 	font-weight: 500;
 }
 
@@ -55,6 +55,7 @@ $textHover: #a3bbc8;
 @function max($numbers...) {
 	@return m#{a}x(#{$numbers});
 }
+
 @function min($numbers...) {
 	@return m#{i}n(#{$numbers});
 }

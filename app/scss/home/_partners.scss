@@ -2,16 +2,32 @@
 	height: 10.5em;
 	padding-top: 0.5em;
 	margin: 0 4.16em 0 2.77em;
+	background-color: #fef7f0;
+
+	@media(max-width: 968px) {
+		height: auto;
+	}
 
 	&__list {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		@media(max-width: 968px) {
+			flex-wrap: wrap;
+			justify-content: space-around;
+		}
 	}
 
 	&__item {
 		max-width: 8.3em;
 		max-height: 5.5em;
+		padding: 0 15px;
+		overflow: hidden;
+
+		@media(max-width: 968px) {
+			margin-bottom: 2.5em;
+		}
 	}
 
 	&__images {

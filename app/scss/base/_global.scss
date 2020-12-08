@@ -1,3 +1,7 @@
+:root {
+	font-size: 16px;
+}
+
 body {
 	min-height: 100vh;
 	@extend %rubik-400;
@@ -33,6 +37,7 @@ body {
 	@extend %dmsans-700;
 	color: $default;
 	margin-bottom: 0.555em;
+
 	&--main {
 		font-size: 0;
 		position: absolute;
@@ -64,7 +69,3 @@ body {
 		}
 	}
 }
-
-
-
-

@@ -1,12 +1,4 @@
 .breadcrumbs {
-	padding: 1.6em 0;
-	@extend %rubik-300;
-	text-align: center;
-	background-color: #edf1f4;
-	&__title {
-		color: #222933;
-		font-size: 2.25rem;
-	}
 
 	&__list {
 		display: inline-flex;
@@ -16,21 +8,39 @@
 		color: #888c91;
 		position: relative;
 		padding-left: 1.1em;
+
 		&::before {
 			content: "/";
-			left: 0.3em;
+			left: 0.5em;
+			bottom: 0.14em;
 			color: #888c91;
 			position: absolute;
+			font-size: 0.875rem;
 		}
+
 		&:first-child {
 			padding: 0;
+
 			&::before {
 				display: none;
+			}
+		}
+
+		span {
+			&:hover {
+				color: inherit;
 			}
 		}
 	}
 
 	&__link {
 		color: inherit;
+		font-size: 0.875rem;
+
+		&:hover {
+			color: #2194E0;
+		}
 	}
+
+
 }

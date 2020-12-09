@@ -4,6 +4,39 @@
 	margin: 0 4.16em 0 2.77em;
 	background-color: #fef7f0;
 
+	&--default {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.partners__list {
+			max-width: 1040px;
+			min-height: 250px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-wrap: wrap;
+
+			@media(max-width: 768px) {
+				justify-content: space-around;
+				padding: 2em 0;
+			}
+		}
+
+		.partners__item {
+			@media(max-width: 968px) {
+				margin-bottom: 0;
+			}
+
+			@media(max-width: 768px) {
+				margin-bottom: 2em;
+			}
+		}
+	}
+
 	@media(max-width: 1100px) {
 		margin: 0 auto;
 	}

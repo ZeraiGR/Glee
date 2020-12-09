@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glee | Login</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	@include('../components/_header.html')
+
+	<main class="main">
+
+		@include('../components/_head.html', {
+		"title": "Log in"
+		})
+
+		<section class="login">
+			<div class="container">
+				<form class="form" action="#">
+					<div class="form__input-item">
+						<label class="form__label" for="name">Username or email address *</label>
+						<input class="form__input" id="name" type="text">
+					</div>
+					<div class="form__input-item">
+						<label class="form__label" for="pass">Password *</label>
+						<input class="form__input" id="pass" type="password">
+					</div>
+					<button class="form__btn" type="submit">Login</button>
+					<div class="form__help-item">
+						<label class="form__label">
+							<input class="form__check-input" type="checkbox">
+							<span class="form__checkbox"></span>
+							Remember me
+						</label>
+						<a class="form__link" href="#">Lost your password?</a>
+					</div>
+					<div class="form__problem">
+						<span class="form__title">Not registered? No problem</span>
+						<a class="form__help-link" href="#">Create an account</a>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		@include('../components/_partners.html')
+	</main>
+
+	@include('../components/_footer.html')
+
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

@@ -11,10 +11,10 @@
 
 		&::before {
 			content: "/";
+			position: absolute;
 			left: 0.5em;
 			bottom: 0.14em;
 			color: #888c91;
-			position: absolute;
 			font-size: 0.875rem;
 		}
 
@@ -35,7 +35,7 @@
 
 	&__link {
 		color: inherit;
-		font-size: 0.875rem;
+		@include adaptiv-font(14, 12);
 
 		&:hover {
 			color: #2194E0;

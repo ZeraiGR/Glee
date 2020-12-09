@@ -14,23 +14,9 @@
 
 	<main class="main">
 
-		<div class="head">
-			<div class="container">
-				<div class="head__inner">
-					<h1 class="title head__title">About Us</h1>
-					<div class="breadcrumbs">
-						<ul class="breadcrumbs__list">
-							<li class="breadcrumbs__item">
-								<a class="breadcrumbs__link" href="#">Home</a>
-							</li>
-							<li class="breadcrumbs__item">
-								<span class="breadcrumbs__link">About Us</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+		@include('../components/_head.html', {
+		"title": "About us"
+		})
 
 		<section class="portfolio">
 			<div class="container">

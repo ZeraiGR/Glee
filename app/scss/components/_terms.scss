@@ -1,0 +1,31 @@
+.terms {
+	padding-top: 6.4em;
+	color: $content;
+
+	@media(max-width: 1200px) {
+		padding: 2em 0 2em;
+	}
+
+	&__title {
+		@include adaptiv-font(24, 20);
+		margin-bottom: 0.8em;
+		@extend %rubik-500;
+	}
+
+	&__item {
+		&--text {
+			margin-bottom: 2.5em;
+		}
+	}
+
+	&__list {
+		margin-left: 1.75em;
+		list-style-type: decimal-leading-zero;
+		margin-bottom: 2.7em;
+	}
+
+	&__subj {
+		margin-bottom: 1.15em;
+		@include adaptiv-font(16, 14);
+	}
+}

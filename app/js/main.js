@@ -1,4 +1,9 @@
 $(function (params) {
+
+	$(".portfolio__text").mCustomScrollbar({
+		theme: "3d-dark"
+	});
+
 	$('.top-slider__items').slick({
 		arrows: false,
 		dots: true

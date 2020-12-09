@@ -54,6 +54,7 @@ function scripts() {
 			'node_modules/slick-carousel/slick/slick.js',
 			'node_modules/mixitup/dist/mixitup.min.js',
 			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+			'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
 			'app/js/main.js'
 		])
 		.pipe(concat('main.min.js'))

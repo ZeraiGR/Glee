@@ -4,6 +4,10 @@
 	margin: 0 4.16em 0 2.77em;
 	background-color: #fef7f0;
 
+	@media(max-width: 1100px) {
+		margin: 0 auto;
+	}
+
 	@media(max-width: 968px) {
 		height: auto;
 	}

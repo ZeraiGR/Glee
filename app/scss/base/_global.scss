@@ -33,7 +33,7 @@ body {
 .title {
 	display: block;
 	text-align: center;
-	font-size: 2.25rem;
+	@include adaptiv-font(36, 24);
 	@extend %dmsans-700;
 	color: $default;
 	margin-bottom: 0.555em;
@@ -49,19 +49,27 @@ body {
 	text-align: center;
 	margin-bottom: 4.166em;
 
+	@media(max-width: 768px) {
+		margin-bottom: 2em;
+	}
+
 	&__item {
 		border: none;
 		background-color: transparent;
 		padding: 0;
 		color: #8b8b8b;
 		@extend %dmsans-700;
-		font-size: 1rem;
+		@include adaptiv-font(16, 13);
 		transition: color 0.3s;
 		cursor: pointer;
 		outline: transparent;
 
 		&+& {
 			margin-left: 1.375em;
+
+			@media(max-width: 420px) {
+				margin-left: 1em;
+			}
 		}
 
 		&:hover {

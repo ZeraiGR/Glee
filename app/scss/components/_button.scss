@@ -50,6 +50,11 @@
 		border-radius: 0;
 		max-width: 13.3em;
 		padding: 1.26em 1.6em 1.26em 1em;
+
+		@include _768 {
+			max-width: 10.3em;
+			padding: 0.7em 1em;
+		}
 	}
 
 	&--categories {

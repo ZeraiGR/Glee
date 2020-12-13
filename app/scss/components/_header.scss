@@ -34,7 +34,15 @@
 				background-color: #edf1f4;
 				transition: background-color 0.3s;
 
-				@media(max-width: 520px) {
+				@include _979 {
+					display: none;
+				}
+
+				@include _768 {
+					display: block;
+				}
+
+				@include _414 {
 					display: none;
 				}
 
@@ -46,6 +54,14 @@
 			&--menu {
 				margin-left: 15px;
 				background-image: url('../images/icons/menu-btn.png');
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center center;
+
+				@include _414 {
+					width: 46px;
+					height: 46px;
+				}
 			}
 		}
 
@@ -55,6 +71,11 @@
 			border-radius: 1.86em;
 			padding: 0.5em 2.46em 0.86em;
 			background-color: $hoverColor;
+
+			@include _414 {
+				padding: 0.1em 1.2em 0.86em;
+				margin-left: 0.7em;
+			}
 		}
 
 		&__product {
@@ -125,20 +146,32 @@
 		align-items: center;
 		font-size: 0.9375rem;
 		justify-content: space-between;
-		@include adaptiv-font(15, 11);
-
-		@media(max-width: 1070px) {
-			flex-wrap: wrap;
-		}
+		@include adaptiv-font(15, 14);
 
 		&__list {
 			display: flex;
 
-			@media(max-width: 1070px) {
-				order: 2;
-				width: 100%;
-				margin-top: 15px;
-				justify-content: center;
+			@include _979 {
+				margin: 0 0.5em;
+			}
+
+			@include _768 {
+				transform: translateX(-130%);
+				position: absolute;
+				z-index: 20;
+				top: 3.5em;
+				left: 0;
+				right: 0;
+				flex-direction: column;
+				padding: 1em;
+				text-align: center;
+				background-color: #f1f1f1;
+				font-size: 2rem;
+				transition: transform 0.3s;
+
+				&.open {
+					transform: translateX(0);
+				}
 			}
 		}
 
@@ -146,9 +179,17 @@
 			&+& {
 				margin-left: 1.666em;
 
-				@media(max-width: 520px) {
+				@include _979 {
 					margin-left: 1em;
 				}
+
+				@include _768 {
+					margin-left: 0;
+				}
+			}
+
+			@include _768 {
+				margin-bottom: 1em;
 			}
 		}
 
@@ -168,8 +209,4 @@
 		display: block;
 		max-height: 40px;
 		max-width: 140px;
-
-		@media(max-width: 400px) {
-			max-width: 70px;
-		}
 	}

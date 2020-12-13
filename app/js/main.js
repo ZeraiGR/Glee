@@ -1,12 +1,25 @@
 $(function (params) {
 
+	$('.header__btn').on('click', function () {
+		$('.menu__list').toggleClass('open');
+	});
+
 	$(".portfolio__text").mCustomScrollbar({
 		theme: "3d-dark"
 	});
 
 	$('.top-slider__items').slick({
 		arrows: false,
-		dots: true
+		dots: true,
+		fade: true,
+		responsive: [{
+			breakpoint: 768,
+			settings: {
+				dots: false,
+				autoplay: true,
+				fade: false
+			}
+		}]
 	});
 
 	$(".design-video__link").fancybox({

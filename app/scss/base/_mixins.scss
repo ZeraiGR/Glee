@@ -10,10 +10,11 @@
 	$maxWidth: $maxWidth - 320;
 	font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
+
 // @include adaptiv-font(max, min);
 
-@mixin _1170 {
-	@media (max-width: 1170px) {
+@mixin _1366 {
+	@media (max-width: 1366px) {
 		@content;
 	}
 }
@@ -30,15 +31,15 @@
 	}
 }
 
-// @mixin _600 {
-// 	@media (max-width: 600px) {
-// 		@content;
-// 	}
-// }
-
-@mixin _480 {
-	@media (max-width: 480px) {
+@mixin _414 {
+	@media (max-width: 414px) {
 		@content;
 	}
 }
 
+
+@mixin _360 {
+	@media (max-width: 360px) {
+		@content;
+	}
+}

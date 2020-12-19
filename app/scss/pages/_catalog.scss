@@ -1,0 +1,44 @@
+@import 'components/filter';
+@import 'components/pagination';
+
+.catalog {
+
+	&__inner {
+		display: flex;
+		padding: 6.6em 0 6.6em;
+
+		@include _979 {
+			padding: 2em 0;
+		}
+
+		@include _768 {
+			flex-direction: column;
+		}
+	}
+
+	&__list {
+		max-width: 48.4em;
+		width: 100%;
+	}
+
+	&__list-inner {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 3.3em;
+		justify-content: space-between;
+
+		@include _1366 {
+			justify-content: space-evenly;
+		}
+
+		@include _979 {
+			margin-bottom: 0;
+		}
+	}
+
+	.product-card {
+		max-width: 15em;
+		margin: 0 0 2em;
+	}
+
+}

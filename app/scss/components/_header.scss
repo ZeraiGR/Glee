@@ -1,4 +1,10 @@
 	.header {
+		position: fixed;
+		background-color: #fff;
+		z-index: 1000;
+		left: 0;
+		right: 0;
+
 		&__inner {
 			display: flex;
 			align-items: center;
@@ -171,6 +177,8 @@
 
 				&.open {
 					transform: translateX(0);
+					height: 100vh;
+					overflow-y: auto;
 				}
 			}
 		}

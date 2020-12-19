@@ -19,6 +19,143 @@
 	&__list {
 		max-width: 48.4em;
 		width: 100%;
+
+		&--row {
+			.catalog__list-inner {
+				flex-wrap: nowrap;
+				flex-direction: column;
+			}
+
+			.product-card {
+				display: flex;
+				flex-direction: row;
+				min-width: 100%;
+				padding: 0;
+				justify-content: space-between;
+				box-shadow: none;
+
+				@include _979 {
+					flex-direction: column;
+					padding: 20px;
+					border: 2px solid rgb(242, 242, 242);
+				}
+			}
+
+			.product-card__img-wrapper {
+				padding: 15px 20px;
+				max-width: 18.3em;
+				width: 100%;
+				border: 2px solid rgb(242, 242, 242);
+				height: 500px;
+				display: flex;
+				align-items: center;
+				margin-right: 30px;
+
+				@include _979 {
+					height: 300px;
+					max-width: 13em;
+					border: none;
+				}
+
+				@include _414 {
+					height: 200px;
+					max-width: 11em;
+				}
+			}
+
+			.product-card__box {
+				min-width: 100%;
+				max-height: 400px;
+				overflow: hidden;
+
+				@include _979 {
+					max-height: 300px;
+				}
+
+				@include _414 {
+					max-height: 200px;
+				}
+			}
+
+			.product-card__box img {
+				width: 100%;
+			}
+
+			.product-card__hover-links {
+				display: none;
+			}
+
+			.product-card__info {
+				max-width: 480px;
+				width: 100%;
+				text-align: left;
+
+				@include _979 {
+					max-width: 100%;
+				}
+			}
+
+			.product-card__name {
+				font-size: 2.5rem;
+				margin-top: 0;
+				color: #333;
+				@extend %rubik-400;
+			}
+
+			.jq-ry-container {
+				padding: 0;
+			}
+
+			.product-card__price {
+				display: block;
+				margin: 30px 0 25px;
+				color: #333;
+				font-size: 1.875rem;
+				@extend %rubik-400;
+			}
+
+			.product-card__text {
+				color: $content;
+				line-height: 1.8;
+				font-size: 1rem;
+				margin-bottom: 35px;
+			}
+
+			.product-card__btns {
+				display: flex;
+			}
+
+			.product-card__btn {
+				width: 50px;
+				height: 50px;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border: none;
+				background-color: transparent;
+				box-shadow: 0px 6px 47px 3px rgba(37, 37, 37, 0.05);
+				margin-right: 10px;
+				transition: background-color 0.3s;
+				cursor: pointer;
+
+				.icon {
+					transition: fill 0.3s;
+				}
+
+				&:hover {
+					background-color: #a2bac7;
+
+					.icon {
+						fill: #fff;
+					}
+				}
+			}
+
+			.pagination {
+				justify-content: start;
+			}
+		}
 	}
 
 	&__list-inner {

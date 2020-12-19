@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glee | Catalog</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+		<header class="header">
+		<div class="container container--big">
+			<div class="header__inner">
+				<nav class="menu">
+					<a class="logo" href="#">
+						logo
+						<img class="logo__img" src="images/logo.png" alt="logo">
+					</a>
+
+					<h1 class="title title--main">Glee home</h1>
+
+					<ul class="menu__list">
+						<li class="menu__item">
+							<a href="#" class="menu__link">Home</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">About</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Services</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Pages</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">News</a>
+						</li>
+						<li class="menu__item">
+							<a href="#" class="menu__link">Contact</a>
+						</li>
+					</ul>
+
+					<div class="header__user-nav">
+						<button class="header__btn header__btn--search" type="button">
+							search-btn
+							<svg width="16" height="16" class="icon icon-search">
+								<use xlink:href="images/icons/icons.svg#search-1"></use>
+							</svg>
+						</button>
+						<div class="header__products">
+							<div class="header__product header__product--likes">
+								<a class="header__icon" href="#">
+									link is the likes poructs
+									<svg width="20" height="17" class="icon icon-heart">
+										<use xlink:href="images/icons/icons.svg#heart"></use>
+									</svg>
+									<span class="header__num header__num--likes">0</span>
+								</a>
+							</div>
+
+							<div class="header__product header__product--cart">
+								<a class="header__icon" href="#">
+									link in the cart proructs
+									<svg width="19" height="17" class="icon">
+										<use xlink:href="images/icons/icons.svg#cart-header"></use>
+									</svg>
+									<span class="header__num header__num--cart">0</span>
+								</a>
+							</div>
+
+						</div>
+						<button class="header__btn header__btn--menu" type="button">
+							Menu button
+						</button>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<main class="main">
+		<div class="head">
+	<div class="container">
+		<div class="head__inner">
+			<h1 class="title head__title">Product list 2</h1>
+			<div class="breadcrumbs">
+				<ul class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a class="breadcrumbs__link" href="#">Home</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span class="breadcrumbs__link">Product list 2</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+		<div class="catalog">
+			<div class="container">
+				<div class="catalog__inner">
+					<div class="filter">
+
+						<div class="filter__item filter-category">
+							<h3 class="filter__title">Category</h3>
+							<form class="filter-category__content">
+								<label class="filter-category__label">
+									<input class="filter-category__input" type="checkbox" name="check" checked>
+									<div class="filter-category__checkbox">
+										<span>Chair</span>
+										<span class="filter-category__arrow"></span>
+									</div>
+								</label>
+								<label class="filter-category__label">
+									<input type="checkbox" class="filter-category__input" name="check">
+									<div class="filter-category__checkbox">
+										<span>Table</span>
+										<span class="filter-category__arrow"></span>
+									</div>
+								</label>
+								<label class="filter-category__label">
+									<input type="checkbox" class="filter-category__input" name="check">
+									<div class="filter-category__checkbox">
+										<span>Lamp</span>
+										<span class="filter-category__arrow"></span>
+									</div>
+								</label>
+								<label class="filter-category__label">
+									<input type="checkbox" class="filter-category__input" name="check">
+									<div class="filter-category__checkbox">
+										<span>Watch</span>
+										<span class="filter-category__arrow"></span>
+									</div>
+								</label>
+								<label class="filter-category__label">
+									<input type="checkbox" class="filter-category__input" name="check">
+									<div class="filter-category__checkbox">
+										<span>Clock</span>
+										<span class="filter-category__arrow"></span>
+									</div>
+								</label>
+							</form>
+						</div>
+
+						<div class="filter__item filter-price">
+							<h3 class="filter__title">Price</h3>
+							<form class="filter-price__content">
+								<input type="text" id="range" class="filter-price__input" name="range" data-min="0"
+									data-max="800" data-from="100" data-to="500">
+								<label for="range" class="filter-price__label">
+									<span>
+										<div>
+											$<span class="filter-price__from"></span>.00
+										</div>
+										<div>
+											$<span class="filter-price__to"></span>.00
+										</div>
+									</span>
+								</label>
+							</form>
+						</div>
+
+						<div class="filter__item filter-brand">
+							<h3 class="filter__title">Brand</h3>
+							<form class="filter-brand__content">
+								<label class="filter-brand__label">
+									<input type="checkbox" class="filter-brand__input" name="check" checked>
+									<div class="filter-brand__checkbox">
+										<span>RFL</span>
+										<span class="filter-brand__total">(10)</span>
+									</div>
+								</label>
+								<label class="filter-brand__label">
+									<input type="checkbox" class="filter-brand__input" name="check">
+									<div class="filter-brand__checkbox">
+										<span>Brothers</span>
+										<span class="filter-brand__total">(21)</span>
+									</div>
+								</label>
+								<label class="filter-brand__label">
+									<input type="checkbox" class="filter-brand__input" name="check">
+									<div class="filter-brand__checkbox">
+										<span>Regal</span>
+										<span class="filter-brand__total">(3)</span>
+									</div>
+								</label>
+								<label class="filter-brand__label">
+									<input type="checkbox" class="filter-brand__input" name="check">
+									<div class="filter-brand__checkbox">
+										<span>Nadia</span>
+										<span class="filter-brand__total">(14)</span>
+									</div>
+								</label>
+								<label class="filter-brand__label">
+									<input type="checkbox" class="filter-brand__input" name="check">
+									<div class="filter-brand__checkbox">
+										<span> Otobi</span>
+										<span class="filter-brand__total">(6)</span>
+									</div>
+								</label>
+							</form>
+
+
+
+						</div>
+
+						<div class="filter__item filter-recent">
+							<h3 class="filter__title">Recent products</h3>
+							<div class="filter-recent__content">
+								<div class="filter-recent__item">
+									<a class="filter-recent__img-box" href="#">
+										<img class="filter-recent__img" src="images/content/products/recent-1.png"
+											alt="product images">
+									</a>
+									<div class="filter-recent__box">
+										<a class="filter-recent__title" href="#">Pendant lamp</a>
+										<div class="filter-recent__star" data-rateyo-rating="4"></div>
+										<span class="filter-recent__price">23$</span>
+									</div>
+								</div>
+
+								<div class="filter-recent__item">
+									<a class="filter-recent__img-box" href="#">
+										<img class="filter-recent__img" src="images/content/products/recent-2.png"
+											alt="product images">
+									</a>
+									<div class="filter-recent__box">
+										<a class="filter-recent__title" href="#">Pendant lamp</a>
+										<div class="filter-recent__star" data-rateyo-rating="4"></div>
+										<span class="filter-recent__price">23$</span>
+									</div>
+								</div>
+
+								<div class="filter-recent__item">
+									<a class="filter-recent__img-box" href="#">
+										<img class="filter-recent__img" src="images/content/products/recent-3.png"
+											alt="product images">
+									</a>
+									<div class="filter-recent__box">
+										<a class="filter-recent__title" href="#">Pendant lamp</a>
+										<div class="filter-recent__star" data-rateyo-rating="4"></div>
+										<span class="filter-recent__price">23$</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="catalog__list">
+						<div class="catalog__list--row">
+							<div class="catalog__list-inner">
+								<article class="product-card mix category-b" href="#">
+									<div class="product-card__img-wrapper">
+										<div class="product-card__box" id="img-box">
+											<img class="product-card__img" src="images/content/products/1-row.png"
+												alt="product item">
+										</div>
+									</div>
+
+									<div class="product-card__hover-links">
+										<a class="product-card__link" href="#">
+											<svg width="20" height="20" class="icon icon-search">
+												<use xlink:href="images/icons/icons.svg#search"></use>
+											</svg>
+										</a>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="20" class="icon icon-cart">
+												<use xlink:href="images/icons/icons.svg#cart"></use>
+											</svg>
+										</button>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="18" class="icon icon-heart">
+												<use xlink:href="images/icons/icons.svg#heart"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div class="product-card__info">
+										<h3 class="product-card__name">Wooden radio</h3>
+										<div class="product-card__star" data-rateyo-rating="4"></div>
+										<span class="product-card__price">$23</span>
+										<p class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et
+											dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+										<div class="product-card__btns">
+											<button class="product-card__btn">
+												<svg width="22" height="20" class="icon icon-cart">
+													<use xlink:href="images/icons/icons.svg#cart"></use>
+												</svg>
+											</button>
+											<button class="product-card__btn">
+												<svg width="22" height="18" class="icon icon-heart">
+													<use xlink:href="images/icons/icons.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+
+								<article class="product-card mix category-b" href="#">
+									<div class="product-card__img-wrapper">
+										<div class="product-card__box" id="img-box">
+											<img class="product-card__img" src="images/content/products/2-row.png"
+												alt="product item">
+										</div>
+									</div>
+
+									<div class="product-card__hover-links">
+										<a class="product-card__link" href="#">
+											<svg width="20" height="20" class="icon icon-search">
+												<use xlink:href="images/icons/icons.svg#search"></use>
+											</svg>
+										</a>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="20" class="icon icon-cart">
+												<use xlink:href="images/icons/icons.svg#cart"></use>
+											</svg>
+										</button>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="18" class="icon icon-heart">
+												<use xlink:href="images/icons/icons.svg#heart"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div class="product-card__info">
+										<h3 class="product-card__name">Wooden chair</h3>
+										<div class="product-card__star" data-rateyo-rating="4"></div>
+										<span class="product-card__price">$23</span>
+										<p class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et
+											dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+										<div class="product-card__btns">
+											<button class="product-card__btn">
+												<svg width="22" height="20" class="icon icon-cart">
+													<use xlink:href="images/icons/icons.svg#cart"></use>
+												</svg>
+											</button>
+											<button class="product-card__btn">
+												<svg width="22" height="18" class="icon icon-heart">
+													<use xlink:href="images/icons/icons.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+
+								<article class="product-card mix category-b" href="#">
+									<div class="product-card__img-wrapper">
+										<div class="product-card__box" id="img-box">
+											<img class="product-card__img" src="images/content/products/4-row.png"
+												alt="product item">
+										</div>
+									</div>
+
+									<div class="product-card__hover-links">
+										<a class="product-card__link" href="#">
+											<svg width="20" height="20" class="icon icon-search">
+												<use xlink:href="images/icons/icons.svg#search"></use>
+											</svg>
+										</a>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="20" class="icon icon-cart">
+												<use xlink:href="images/icons/icons.svg#cart"></use>
+											</svg>
+										</button>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="18" class="icon icon-heart">
+												<use xlink:href="images/icons/icons.svg#heart"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div class="product-card__info">
+										<h3 class="product-card__name">Retro table</h3>
+										<div class="product-card__star" data-rateyo-rating="4"></div>
+										<span class="product-card__price">$23</span>
+										<p class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et
+											dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+										<div class="product-card__btns">
+											<button class="product-card__btn">
+												<svg width="22" height="20" class="icon icon-cart">
+													<use xlink:href="images/icons/icons.svg#cart"></use>
+												</svg>
+											</button>
+											<button class="product-card__btn">
+												<svg width="22" height="18" class="icon icon-heart">
+													<use xlink:href="images/icons/icons.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+
+								<article class="product-card mix category-b" href="#">
+									<div class="product-card__img-wrapper">
+										<div class="product-card__box" id="img-box">
+											<img class="product-card__img" src="images/content/products/3-row.png"
+												alt="product item">
+										</div>
+									</div>
+
+									<div class="product-card__hover-links">
+										<a class="product-card__link" href="#">
+											<svg width="20" height="20" class="icon icon-search">
+												<use xlink:href="images/icons/icons.svg#search"></use>
+											</svg>
+										</a>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="20" class="icon icon-cart">
+												<use xlink:href="images/icons/icons.svg#cart"></use>
+											</svg>
+										</button>
+										<button class="product-card__link" type="button">
+											<svg width="22" height="18" class="icon icon-heart">
+												<use xlink:href="images/icons/icons.svg#heart"></use>
+											</svg>
+										</button>
+									</div>
+
+									<div class="product-card__info">
+										<h3 class="product-card__name">Pendant lamp</h3>
+										<div class="product-card__star" data-rateyo-rating="4"></div>
+										<span class="product-card__price">$23</span>
+										<p class="product-card__text">consectetur adipisicing elit, sed do eiusmod tempor
+											incididunt ut labore et
+											dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+										<div class="product-card__btns">
+											<button class="product-card__btn">
+												<svg width="22" height="20" class="icon icon-cart">
+													<use xlink:href="images/icons/icons.svg#cart"></use>
+												</svg>
+											</button>
+											<button class="product-card__btn">
+												<svg width="22" height="18" class="icon icon-heart">
+													<use xlink:href="images/icons/icons.svg#heart"></use>
+												</svg>
+											</button>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="pagination">
+								<ul class="pagination__list">
+									<li class="pagination__item">
+										<a class="pagination__link pagination__link--active" href="#">1</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">2</a>
+									</li>
+									<li class="pagination__item">
+										<a class="pagination__link" href="#">3</a>
+									</li>
+								</ul>
+								<a class="pagination__link pagination__link--next" href="#">Next</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="partners partners-solo">
+	<div class="container">
+		<div class="partners__slider">
+			<div class="partners__list">
+				<div class="partners__item">
+					<img class="partners__images" src="images/content/partners/logo-1.png" alt="partners logo">
+				</div>
+				<div class="partners__item">
+					<img class="partners__images" src="images/content/partners/logo-2.png" alt="partners logo">
+				</div>
+				<div class="partners__item">
+					<img class="partners__images" src="images/content/partners/logo-3.png" alt="partners logo">
+				</div>
+				<div class="partners__item">
+					<img class="partners__images" src="images/content/partners/logo-4.png" alt="partners logo">
+				</div>
+				<div class="partners__item">
+					<img class="partners__images" src="images/content/partners/logo-5.png" alt="partners logo">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	</main>
+
+	<footer class="footer">
+	<div class="container">
+		<div class="footer__top">
+			<div class="footer__contact">
+				<a class="logo footer__logo" href="#">
+					<img class="logo__img" src="images/logo.png" alt="logo">
+				</a>
+				<address class="footer__address">
+					<p class="footer__link footer__link--direction">ADDRESS: 4772 Wines Lane
+						Houston, TX 77032</p>
+					<a class="footer__link footer__link--address" href="tel:8323475843">TELEPHONE:
+						+832-347-5843
+					</a>
+					<a class="footer__link footer__link--address" href="mailto:contact@Glee.com">EMAIL:
+						contact@Glee.com</a>
+				</address>
+			</div>
+
+			<div class="footer__help footer__help--services">
+				<span class="footer__title">Services
+				</span>
+				<ul class="footer__list">
+					<li class="footer__subject">
+						<a class="footer__link" href="#">About us</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Return Policy</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Our Blog</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Contact Us</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Terms & Condition</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer__help footer__help--account">
+				<span class="footer__title">Account
+				</span>
+				<ul class="footer__list">
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Your Account</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Checkout</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Login</a>
+					</li>
+					<li class="footer__subject">
+						<a class="footer__link" href="#">Register</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="footer__subscribe">
+				<span class="footer__title">newsletter</span>
+				<p class="footer__text">Subscribe by our newsletter and get
+					update protidin.</p>
+				<form class="footer__form" action="#">
+					<input id="footer__input" class="footer__input" name="sub-email" type="email" placeholder="Email address"
+						required>
+					<label class="footer__label" for="footer__input">Email address</label>
+					<button class="footer__btn" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+
+		<div class="footer__bottom">
+			<p class="footer__copy">©2020 CopyRight Example. All rights reserved.</p>
+			<ul class="footer__lister">
+				<li class="footer__subj">
+					<a class="footer__link" href="#">Home</a>
+				</li>
+				<li class="footer__subj">
+					<a class="footer__link" href="#">About</a>
+				</li>
+				<li class="footer__subj">
+					<a class="footer__link" href="#">Blog</a>
+				</li>
+				<li class="footer__subj">
+					<a class="footer__link" href="#">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

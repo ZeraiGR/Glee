@@ -17,6 +17,7 @@ body {
 
 .main {
 	flex-grow: 1;
+	padding-top: 154px;
 
 	@include _1366 {
 		.partners {
@@ -26,6 +27,10 @@ body {
 		.partners-solo {
 			padding-bottom: 0;
 		}
+	}
+
+	@include _979 {
+		padding-top: 125px;
 	}
 }
 

@@ -7,8 +7,12 @@
 	justify-content: space-between;
 	margin: 0 0.5em;
 
-	@media(max-width: 1200px) {
+	@include _1366 {
 		margin-bottom: 1.5em;
+	}
+
+	@include _979 {
+		max-width: 19.5em;
 	}
 
 	&__img-link {

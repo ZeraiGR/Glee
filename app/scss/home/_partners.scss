@@ -1,8 +1,16 @@
 .partners {
-	height: 10.5em;
-	padding-top: 0.5em;
-	margin: 0 4.16em 0 2.77em;
+	height: 15em;
 	background-color: #fef7f0;
+	display: flex;
+	align-items: center;
+
+	@include _1366 {
+		padding-bottom: 1.5em;
+	}
+
+	@include _979 {
+		height: 8em;
+	}
 
 	&--default {
 		margin: 0;
@@ -19,41 +27,13 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-wrap: wrap;
-
-			@media(max-width: 768px) {
-				justify-content: space-around;
-				padding: 2em 0;
-			}
 		}
-
-		.partners__item {
-			@media(max-width: 968px) {
-				margin-bottom: 0;
-			}
-
-			@media(max-width: 768px) {
-				margin-bottom: 2em;
-			}
-		}
-	}
-
-	@media(max-width: 1100px) {
-		margin: 0 auto;
-	}
-
-	@media(max-width: 968px) {
-		height: auto;
 	}
 
 	&__list {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-
-		@media(max-width: 968px) {
-			flex-wrap: wrap;
-			justify-content: space-around;
-		}
 	}
 
 	&__item {
@@ -61,13 +41,24 @@
 		max-height: 5.5em;
 		padding: 0 15px;
 		overflow: hidden;
-
-		@media(max-width: 968px) {
-			margin-bottom: 2.5em;
-		}
 	}
 
 	&__images {
 		object-fit: cover;
+		margin: 0 auto;
+	}
+
+	.slick-list {
+		width: 100%;
+	}
+
+	.slick-track {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.slick-slide {
+		text-align: center;
 	}
 }

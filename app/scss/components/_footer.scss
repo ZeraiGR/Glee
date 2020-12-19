@@ -7,6 +7,7 @@
 		@include _979 {
 			flex-wrap: wrap;
 			justify-content: space-between;
+			padding: 2em 0 2em;
 		}
 	}
 
@@ -33,6 +34,10 @@
 
 		@include _979 {
 			margin-right: 0;
+		}
+
+		@include _414 {
+			max-width: 100%;
 		}
 	}
 
@@ -155,6 +160,10 @@
 	&__copy {
 		font-size: 0.87rem;
 		color: $footer_link;
+
+		@include _414 {
+			text-align: center;
+		}
 	}
 
 	&__lister {

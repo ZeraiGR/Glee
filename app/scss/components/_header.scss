@@ -4,6 +4,10 @@
 			align-items: center;
 			padding: 3.05em 0 2.5em;
 			justify-content: space-between;
+
+			@include _979 {
+				padding: 2em 0 2em;
+			}
 		}
 
 		&__user-nav {

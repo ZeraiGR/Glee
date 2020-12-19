@@ -17,6 +17,16 @@ body {
 
 .main {
 	flex-grow: 1;
+
+	@include _1366 {
+		.partners {
+			padding-bottom: 1.5em;
+		}
+
+		.partners-solo {
+			padding-bottom: 0;
+		}
+	}
 }
 
 .container {

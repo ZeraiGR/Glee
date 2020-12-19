@@ -83,15 +83,12 @@
 	}
 
 	&__descr {
-		overflow: hidden;
 		color: $textColor;
 		line-height: 1.25;
 		font-size: 1.125rem;
 		@extend %dmsans-500;
-		display: -webkit-box;
-		-webkit-line-clamp: 3;
 		padding: 0 0.83em 0.2em 0;
-		-webkit-box-orient: vertical;
+		@include cut-text(3);
 	}
 
 	&__descr-link {

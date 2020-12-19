@@ -109,24 +109,18 @@
 
 	&__product-title {
 		display: block;
-		overflow: hidden;
 		line-height: 1.2;
 		@include adaptiv-font(26, 24);
 		@extend %dmsans-700;
-		display: -webkit-box;
 		margin-bottom: 0.96em;
-		-webkit-line-clamp: 3;
-		-webkit-box-orient: vertical;
+		@include cut-text(3);
 	}
 
 	&__descr {
 		@include adaptiv-font(16, 13);
 		line-height: 1.7;
-		overflow: hidden;
-		display: -webkit-box;
 		margin-bottom: 1.87em;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
+		@include cut-text(4);
 	}
 
 	&__tap {

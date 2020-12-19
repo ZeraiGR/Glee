@@ -54,9 +54,7 @@
 			width: 1em;
 			height: 1em;
 			background-image: url('../images/icons/check-arrow.svg');
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position: center center;
+			@include bg-default;
 		}
 	}
 

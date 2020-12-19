@@ -2,8 +2,8 @@
 	padding-top: 6.4em;
 	color: $content;
 
-	@media(max-width: 1200px) {
-		padding: 2em 0 2em;
+	@include _979 {
+		padding-top: 2em;
 	}
 
 	&__title {

@@ -12,11 +12,9 @@
 		position: relative;
 		@extend %dmsans-700;
 		min-height: 13.88em;
-		background-size: cover;
 		transition: transform 0.3s;
 		background-color: #f8f8f8;
-		background-repeat: no-repeat;
-		background-position: center center;
+		@include bg-default;
 
 		@include _414 {
 			background-position: -5px 30px;

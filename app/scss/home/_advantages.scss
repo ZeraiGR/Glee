@@ -96,22 +96,16 @@
 
 	&__heading {
 		display: block;
-		overflow: hidden;
 		color: #414141;
 		@extend %dmsans-700;
-		display: -webkit-box;
 		margin-bottom: 0.55em;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
+		@include cut-text(2);
 	}
 
 	&__conditions {
 		font-size: 1rem;
-		overflow: hidden;
 		color: #585858;
 		@extend %dmsans-400;
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
+		@include cut-text(4);
 	}
 }

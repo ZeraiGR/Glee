@@ -2,10 +2,8 @@
 	display: flex;
 	min-height: 27.7em;
 	align-items: center;
-	background-size: cover;
 	justify-content: center;
-	background-repeat: no-repeat;
-	background-position: top center;
+	@include bg-default(top);
 
 	@include _979 {
 		min-height: 20em;

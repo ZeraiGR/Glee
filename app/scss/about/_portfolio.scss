@@ -21,9 +21,7 @@
 		max-width: 31.6em;
 		margin-right: 1em;
 		background-image: url('../images/content/portfolio/item.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: top center;
+		@include bg-default(top);
 
 		@include _979 {
 			margin-right: 0;
@@ -89,12 +87,9 @@
 	&__title {
 		color: $content;
 		line-height: 1;
-		overflow: hidden;
 		text-align: left;
 		margin-bottom: 1.2em;
-		display: -webkit-box;
-		-webkit-line-clamp: 2;
-		-webkit-box-orient: vertical;
+		@include cut-text(2);
 	}
 
 	&__text {

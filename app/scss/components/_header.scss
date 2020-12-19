@@ -58,9 +58,7 @@
 			&--menu {
 				margin-left: 15px;
 				background-image: url('../images/icons/menu-btn.png');
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position: center center;
+				@include bg-default;
 
 				@include _414 {
 					width: 46px;
@@ -136,9 +134,7 @@
 			height: 2.7em;
 			display: block;
 			margin-left: 0.9em;
-			background-size: cover;
-			background-repeat: no-repeat;
-			background-position: center center;
+			@include bg-default;
 			background-image: url('../images/icons/menu-btn.png');
 		}
 	}

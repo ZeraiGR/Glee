@@ -57,7 +57,8 @@ function scripts() {
 			'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
 			'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
 			'node_modules/rateyo/src/jquery.rateyo.js',
-			'app/js/main.js'
+			'node_modules/swiper/swiper-bundle.js',
+			'app/js/main.js',
 		])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())

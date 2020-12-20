@@ -1,5 +1,48 @@
 $(function (params) {
 
+	let bigSlider = new Swiper('.slider-big', {
+		slidesPerView: 1,
+		// Смена прозрачности
+		effect: 'fade',
+
+		// Дополнение к fade
+		fadeEffect: {
+			// Параллельная
+			// Смена прозрачности
+			crossFade: true
+		},
+		// Миниатюры (превью)
+		thumbs: {
+			swiper: {
+				el: '.slider-mini',
+				slidesPerView: 3,
+				direction: 'vertical',
+				watchOverflow: true,
+			}
+		},
+	});
+
+	// let relatedSlider = new Swiper('.related__slider', {
+	// 	slidesPerView: 4,
+	// 	slidesPerGroup: 1,
+	// 	spaceBetween: 30,
+	// });
+
+	$('.related__slider-list').slick({
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		prevArrow: ' <button class="slick-btn slick-btn--invert slick-prev"> <svg width = "22"height = "9" class = "icon icon-arrow" ><use xlink: href = "../images/icons/icons.svg#arrow-left-slider" > < /use> </svg> </button>',
+		nextArrow: '<button class="slick-btn slick-btn--invert slick-next"> <svg width = "22"height = "9" class = "icon icon-arrow" ><use xlink: href = "../images/icons/icons.svg#arrowl-right-slider" > < /use> </svg> </button>',
+	});
+
+	$('.tabs__top-item').on('click', function (e) {
+		e.preventDefault();
+		$('.tabs__top-item').removeClass('tabs__top-item--active');
+		$(this).addClass('tabs__top-item--active');
+		$('.tabs__content-item').removeClass('tabs__content-item--active');
+		$($(this).attr('href')).addClass('tabs__content-item--active');
+	})
+
 	$('.filter-price__input').ionRangeSlider({
 		type: "double",
 		onStart: function (data) {
@@ -23,7 +66,7 @@ $(function (params) {
 			'</svg>'
 	});
 
-	$('.product-card__star').rateYo({
+	$('.product-card__star, .delalis-product__star').rateYo({
 		starWidth: '20px',
 		readOnly: true,
 		normalFill: '#d6d6d6',

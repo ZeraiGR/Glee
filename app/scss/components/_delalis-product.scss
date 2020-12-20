@@ -1,0 +1,131 @@
+.delalis-product {
+	display: grid;
+	grid-template-columns: repeat(2, 570px);
+	grid-column-gap: 30px;
+	padding-bottom: 100px;
+
+	&__sliders {
+		display: flex;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__info-title {
+		font-size: 2.5rem;
+		color: #333;
+		@extend %rubik-400;
+		margin-bottom: 7px;
+	}
+
+	&__star {
+		margin-bottom: 35px;
+	}
+
+	.jq-ry-container {
+		padding: 0;
+	}
+
+	&__price {
+		font-size: 1.875rem;
+		color: #333;
+		margin-bottom: 25px;
+	}
+
+	&__text {
+		color: $content;
+		margin-bottom: 30px;
+	}
+
+	&__form {
+		margin-bottom: 50px;
+	}
+
+	&__btn {
+		height: 50px;
+		border: none;
+		background-color: $textHover;
+		color: #fff;
+		font-size: 0.9375rem;
+		text-transform: uppercase;
+		padding: 0 50px;
+		margin-right: 15px;
+		cursor: pointer;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+		}
+	}
+
+	&__addon {
+		span {
+			display: block;
+			margin-bottom: 13px;
+			color: $content;
+		}
+	}
+
+}
+
+.slider-mini {
+	margin-right: 23px;
+
+	&__list {
+		max-width: 140px;
+	}
+
+	&__item {
+		min-width: 135px;
+		max-height: 160px;
+		margin-bottom: 23px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.swiper-slide-thumb-active {
+		opacity: 0.8;
+	}
+
+	&__img-box {
+		width: 135px;
+		height: 160px;
+		border: 2px solid #f2f2f2;
+		cursor: pointer;
+	}
+
+	&__img {
+		object-fit: cover;
+		height: 100%;
+		margin: 0 auto;
+	}
+}
+
+.slider-big {
+
+	&__list {
+		max-width: 385px;
+	}
+
+	&__item {
+		max-width: 385px;
+		height: 530px;
+	}
+
+	&__img-box {
+		border: 2px solid #f2f2f2;
+		width: 375px;
+		height: 526px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+
+}

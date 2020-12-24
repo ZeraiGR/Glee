@@ -22,11 +22,7 @@ $(function (params) {
 		},
 	});
 
-	// let relatedSlider = new Swiper('.related__slider', {
-	// 	slidesPerView: 4,
-	// 	slidesPerGroup: 1,
-	// 	spaceBetween: 30,
-	// });
+	$('.delalis-product__counter').styler();
 
 	$('.related__slider-list').slick({
 		slidesToShow: 4,

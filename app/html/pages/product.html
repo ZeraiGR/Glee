@@ -78,7 +78,7 @@
 								aliquip ex ea
 								commodo </p>
 							<form class="delalis-product__form" action="#">
-								<input class="delalis-product__counter" type="number">
+								<input class="delalis-product__counter" type="number" min="1" value="1">
 								<button class="delalis-product__btn" type="submit">Add to cart</button>
 							</form>
 							<div class="delalis-product__addon">
@@ -117,8 +117,8 @@
 			</div>
 		</section>
 
-		<section class="related">
-			<div class="container">
+		<!-- <section class="related">
+			<div class="container container--related">
 				<div class="related__inner">
 					<div class="related__top">
 						<h2 class="related__title title">Related products</h2>
@@ -309,7 +309,10 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
+
+		@include('../components/_blog.html')
+		@include('../components/_partners.html')
 
 	</main>
 

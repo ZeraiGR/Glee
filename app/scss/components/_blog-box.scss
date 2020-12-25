@@ -1,0 +1,18 @@
+.blog-box {
+	display: flex;
+	color: #222933;
+	margin-top: auto;
+	font-size: 0.75rem;
+	padding: 1.41em 0 2.08em;
+	text-transform: uppercase;
+	border-top: 1px solid #e0e0e0;
+
+	&__date {
+		color: #222933;
+		margin-right: 1.6em;
+	}
+
+	&__author {
+		color: #222933;
+	}
+}

@@ -16,6 +16,14 @@
 		width: 100%;
 		object-fit: cover;
 		height: 500px;
+
+		@include _979 {
+			height: 350px;
+		}
+
+		@include _414 {
+			height: 250px;
+		}
 	}
 
 	.blog-box {
@@ -38,12 +46,20 @@
 
 	&__info {
 		padding-top: 35px;
+
+		@include _979 {
+			padding-top: 15px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 25px;
-		text-align-last: left;
+		text-align: left;
 		@extend %rubik-400;
+
+		@include _979 {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__link {
@@ -56,6 +72,11 @@
 		color: $content;
 		font-size: 1rem;
 		margin-bottom: 32px;
+		@include adaptiv-font(16, 14);
+
+		@include _979 {
+			margin-bottom: 15px;
+		}
 	}
 
 	&__button {
@@ -81,6 +102,10 @@
 	height: 43px;
 	margin-bottom: 55px;
 
+	@include _768 {
+		margin-bottom: 25px;
+	}
+
 	&__form {
 		display: flex;
 		height: 43px;
@@ -90,6 +115,11 @@
 		border: 1px solid #edf1f4;
 		outline: transparent;
 		padding: 3px;
+
+		@include _768 {
+			max-width: 200px;
+			width: 100%;
+		}
 	}
 
 	&__btn {
@@ -106,6 +136,11 @@
 }
 
 .recent-post {
+	@include _768 {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
 	&__title {
 		position: relative;
 		display: inline-block;

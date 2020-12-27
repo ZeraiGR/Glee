@@ -1,0 +1,46 @@
+.breadcrumbs {
+
+	&__list {
+		display: inline-flex;
+	}
+
+	&__item {
+		color: #888c91;
+		position: relative;
+		padding-left: 1.1em;
+
+		&::before {
+			content: "/";
+			position: absolute;
+			left: 0.5em;
+			bottom: 0.14em;
+			color: #888c91;
+			font-size: 0.875rem;
+		}
+
+		&:first-child {
+			padding: 0;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		span {
+			&:hover {
+				color: inherit;
+			}
+		}
+	}
+
+	&__link {
+		color: inherit;
+		@include adaptiv-font(14, 12);
+
+		&:hover {
+			color: #2194E0;
+		}
+	}
+
+
+}

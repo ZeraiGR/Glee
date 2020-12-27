@@ -1,0 +1,171 @@
+.product-slip {
+	display: flex;
+	flex-grow: 1;
+	max-height: 21.6em;
+	position: relative;
+	align-items: center;
+	justify-content: center;
+	background-color: #feefe2;
+	padding: 4.4em 0 4.4em 13.8em;
+
+	@include _1366 {
+		padding: 3em 1em;
+	}
+
+	@include _979 {
+		padding: 0.5em 1em;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@include _768 {
+		flex-direction: row;
+		justify-content: space-around;
+		padding: 2em;
+		margin-bottom: 1.5em;
+	}
+
+	@include _414 {
+		flex-direction: column;
+		padding: 0.5em;
+	}
+
+	&+& {
+		margin-left: 1.6em;
+
+		@include _768 {
+			margin-left: 0;
+		}
+	}
+
+	&__box {
+		left: 14%;
+		bottom: 4.44em;
+		overflow: hidden;
+		max-width: 13.3em;
+		max-height: 23.3em;
+		position: absolute;
+
+		@include _1366 {
+			position: static;
+			padding: 1em;
+		}
+
+		@include _979 {
+			max-width: 5em;
+			padding: 0;
+			margin: 0.6em auto;
+		}
+
+		@include _768 {
+			margin: 0;
+		}
+
+		@include _414 {
+			max-width: 3.5em;
+			margin: 0.6em auto;
+		}
+	}
+
+	&__images {
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__content {
+		color: $content;
+		max-width: 18.8em;
+
+		@include _979 {
+			text-align: center;
+		}
+
+
+		@include _768 {
+			padding-left: 1em;
+		}
+
+		@include _414 {
+			padding-left: 0;
+			margin: 0 auto;
+		}
+
+		&--fixed {
+			padding-left: 2.2em;
+
+			@include _979 {
+				padding-left: 0;
+			}
+
+			@include _768 {
+				padding-left: 1em;
+			}
+
+			@include _414 {
+				padding-left: 0;
+			}
+		}
+	}
+
+	&__product-title {
+		display: block;
+		line-height: 1.2;
+		@include adaptiv-font(26, 24);
+		@extend %dmsans-700;
+		margin-bottom: 0.96em;
+		@include cut-text(3);
+	}
+
+	&__descr {
+		@include adaptiv-font(16, 13);
+		line-height: 1.7;
+		margin-bottom: 1.87em;
+		@include cut-text(4);
+	}
+
+	&__tap {
+		z-index: 1;
+		color: $link;
+		font-size: 0.93rem;
+		padding: 1.3em 1em;
+		position: relative;
+		border-radius: 0.26em;
+		display: inline-block;
+		transition: all 300ms ease;
+		border: 1px solid #b3b7b5;
+
+		.icon-link {
+			fill: $link;
+			margin-left: 3.5em;
+		}
+
+		&:before {
+			content: '';
+			top: 0;
+			right: 0;
+			width: 0;
+			left: auto;
+			z-index: -1;
+			height: 100%;
+			position: absolute;
+			transition: all 300ms ease;
+			background-color: $textHover;
+		}
+
+		&:hover {
+			color: #fff;
+
+			&:before {
+				content: '';
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				z-index: -1;
+				height: 100%;
+				position: absolute;
+				background-color: $textHover;
+			}
+		}
+	}
+}

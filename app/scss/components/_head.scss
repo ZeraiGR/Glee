@@ -1,0 +1,13 @@
+.head {
+	padding: 1.6em 0;
+	text-align: center;
+	background-color: #edf1f4;
+
+	&__title {
+		margin-bottom: 0.1em;
+		line-height: 1;
+		color: #222933;
+		@extend %rubik-300;
+		@include adaptiv-font(36, 24);
+	}
+}

@@ -1,0 +1,26 @@
+.design {
+	&__products {
+		padding-top: 5.27em;
+
+		@include _979 {
+			padding-top: 2em;
+		}
+	}
+
+	&__cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -0.83em;
+		margin-bottom: 5em;
+		margin-bottom: 6.5em;
+
+		@include _979 {
+			margin-bottom: 1.5em;
+		}
+	}
+
+	.mixitup-control-active {
+		color: $default;
+	}
+}

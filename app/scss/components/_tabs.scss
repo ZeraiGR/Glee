@@ -1,0 +1,115 @@
+.tabs {
+	&__top {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+
+	&__top-item {
+		background-color: #edf1f4;
+		color: $content;
+		height: 50px;
+		max-width: 240px;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@extend %rubik-500;
+		@include adaptiv-font(18, 14);
+		text-align: center;
+
+		&:hover {
+			color: #2194E0;
+		}
+
+		&+& {
+			margin-left: 10px;
+		}
+
+		&--active {
+			background-color: $textHover;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	&__content-item {
+		display: none;
+		@include adaptiv-font(18, 16);
+
+		&--active {
+			display: block;
+		}
+	}
+
+	// &__content-text {}
+}
+
+.related {
+	&__inner {
+		max-width: 1200px;
+		padding: 0 15px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		margin-bottom: 68px;
+		text-align: left;
+		color: $content;
+	}
+
+	.product-card {
+		display: flex !important;
+		margin: 0;
+	}
+
+	.slick-list {
+		max-width: 1200px;
+		padding: 70px 30px 115px;
+		margin: -70px -30px -115px;
+
+		@include _1366 {
+			margin: -70px -30px 0;
+		}
+	}
+
+	.slick-btn {
+		position: absolute;
+		top: -40px;
+		right: 45px;
+		width: 50px;
+		height: 50px;
+		border: 2px solid #edf1f4;
+		cursor: pointer;
+		background-color: transparent;
+		transition: border-color 0.3s;
+		outline: transparent;
+
+		&:hover {
+			border-color: $textHover;
+		}
+	}
+
+	.slick-prev {
+		right: 115px;
+		z-index: 5;
+	}
+
+	.icon-arrow {
+		fill: $textHover;
+	}
+
+	.slick-cloned,
+	.slick-slide {
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
+	.slick-active.slick-cloned,
+	.slick-slide.slick-active {
+		opacity: 1;
+	}
+}

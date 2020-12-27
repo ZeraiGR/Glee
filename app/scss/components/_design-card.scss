@@ -1,0 +1,69 @@
+.design-card {
+	width: 100%;
+	max-width: 20.5em;
+	margin: 0 0.83em 1.6em;
+
+	@include _979 {
+		margin: 0 0.3em 1em;
+	}
+
+	&__inner {
+		overflow: hidden;
+		position: relative;
+		@extend %dmsans-700;
+		min-height: 13.88em;
+		transition: transform 0.3s;
+		background-color: #f8f8f8;
+		@include bg-default;
+
+		@include _414 {
+			background-position: -5px 30px;
+		}
+
+		&:hover {
+			transform: scale(1.1);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+		}
+
+		&--chear {
+			@include _414 {
+				background-position: -60px 30px;
+			}
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		display: block;
+		padding: 2.1em 0 1.66em 1.94em;
+	}
+
+	&__name {
+		display: block;
+		color: $default;
+		line-height: 1.2;
+		max-width: 8.75em;
+		font-size: 1.25rem;
+		margin-bottom: 0.6em;
+	}
+
+	&__status {
+		font-size: 1rem;
+		color: #a3bbc8;
+	}
+
+	&__img {
+		left: 5.55em;
+		bottom: 2.22em;
+		position: absolute;
+
+		&--chair {
+			left: 11.1em;
+		}
+	}
+}

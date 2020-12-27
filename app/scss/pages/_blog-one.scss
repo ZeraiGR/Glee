@@ -1,0 +1,242 @@
+@import 'components/post-box';
+@import 'components/post-author';
+@import 'components/comment';
+
+
+.blog-one {
+	.post-box {
+		margin-bottom: 40px;
+
+		@include _768 {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__post {
+		h2 {
+			margin: 25px 0;
+			font-weight: 400;
+			font-size: 36px;
+			color: #333;
+
+			@include _768 {
+				margin: 15px 0;
+			}
+		}
+
+		h3 {
+			margin: 25px 0;
+			color: $content;
+			@extend %rubik-500;
+			font-size: 1rem;
+
+			@include _768 {
+				margin: 15px 0;
+			}
+		}
+
+		h4 {
+			margin: 25px 0;
+			color: $content;
+			@extend %rubik-500;
+			font-size: 18px;
+
+			@include _768 {
+				margin: 15px 0;
+			}
+		}
+
+		p {
+			margin: 25px 0;
+			color: $content;
+			font-size: 1rem;
+			line-height: 1.8;
+
+			@include _768 {
+				margin: 15px 0;
+			}
+		}
+
+		blockquote {
+			margin: 40px 0;
+			padding: 20px 100px 20px 35px;
+			background-color: #edf1f4;
+			border-left: 6px solid $textHover;
+			color: $content;
+			font-size: 16px;
+
+			@include _768 {
+				margin: 20px 0;
+			}
+		}
+
+		cite {
+			display: block;
+			margin-top: 20px;
+			padding-left: 45px;
+			position: relative;
+
+			&::before {
+				content: "";
+				position: absolute;
+				top: 10px;
+				left: 4px;
+				width: 20px;
+				height: 5px;
+				background-color: $textHover;
+			}
+		}
+	}
+
+	&__left-img {
+		float: left;
+		object-fit: cover;
+		margin-right: 30px;
+		margin-bottom: 10px;
+
+		@include _979 {
+			float: none;
+		}
+	}
+
+	&__right-img {
+		float: right;
+		object-fit: cover;
+		margin-right: 30px;
+		margin-bottom: 10px;
+
+		@include _979 {
+			float: none;
+		}
+	}
+}
+
+.comments {
+	margin-bottom: 90px;
+
+	@include _768 {
+		margin-bottom: 1.5em;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 55px;
+		font-size: 24px;
+		color: $link;
+		@extend %rubik-700;
+
+		@include _768 {
+			margin-bottom: 1.5em;
+		}
+	}
+}
+
+.comment-leave {
+	margin-top: 90px;
+
+	@include _768 {
+		margin-top: 1.5em;
+	}
+
+	&__title {
+		display: block;
+		margin-bottom: 45px;
+		font-size: 24px;
+		@extend %rubik-700;
+		color: $link;
+
+		@include _768 {
+			margin-bottom: 1em;
+		}
+	}
+
+	&__box {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 20px;
+
+		@include _979 {
+			flex-direction: column;
+			margin-bottom: 0;
+		}
+	}
+
+	&__input-wrapper {
+		position: relative;
+		max-width: 48%;
+		width: 100%;
+		height: 50px;
+
+		@include _979 {
+			max-width: 100%;
+			margin-bottom: 20px;
+		}
+
+		.icon {
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			fill: #597583;
+		}
+	}
+
+	&__input {
+		width: 100%;
+		height: 100%;
+		outline: transparent;
+		border: 1px solid #e5e5e5;
+		padding: 0 20px;
+
+		&:focus {
+			border: 1px solid $textHover;
+		}
+
+		&::placeholder {
+			font-size: 1rem;
+		}
+	}
+
+	&__textarea-wrapper {
+		position: relative;
+		margin-bottom: 40px;
+		max-width: 100%;
+		width: 100%;
+		height: 120px;
+
+		.icon {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			fill: #597583;
+		}
+	}
+
+	&__textarea {
+		padding: 20px;
+		width: 100%;
+		height: 100%;
+		resize: none;
+
+		&::placeholder {
+			font-size: 1rem;
+		}
+	}
+
+	&__btn {
+		width: 190px;
+		height: 50px;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: transparent;
+		cursor: pointer;
+		user-select: none;
+		text-transform: uppercase;
+
+		&:active {
+			border: 1px solid red;
+		}
+	}
+}

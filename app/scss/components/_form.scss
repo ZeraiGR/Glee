@@ -1,0 +1,106 @@
+.form {
+	max-width: 33.5em;
+	width: 100%;
+	margin: 0 auto;
+	color: $link;
+	font-size: 0.875rem;
+
+	&__input-item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.78em;
+	}
+
+	&__label {
+		margin-bottom: 0.71em;
+	}
+
+	&__input {
+		height: 4.28em;
+		padding: 0.35em 1.07em;
+		border: 2px solid #f6f6f6;
+	}
+
+	&__btn {
+		display: block;
+		width: 100%;
+		border: none;
+		padding: 0.94em 0.55em;
+		color: #fff;
+		cursor: pointer;
+		font-size: 1.125rem;
+		background-color: $link;
+		transition: all 0.3s;
+
+		&:hover {
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+			transform: scale(1.01);
+		}
+	}
+
+	&__help-item {
+		display: flex;
+		justify-content: space-between;
+		padding: 2.14em 0;
+		border-bottom: 2px solid #f6f6f6;
+		margin-bottom: 2.14em;
+	}
+
+	&__check-input {
+		@extend %checkbox-hidden;
+
+		&:checked+.form__checkbox {
+			width: 1em;
+			height: 1em;
+			background-image: url('../images/icons/check-arrow.svg');
+			@include bg-default;
+		}
+	}
+
+	&__checkbox {
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		border-radius: 2px;
+		margin-bottom: -2px;
+		margin-right: 0.85em;
+		cursor: pointer;
+		background-color: #ebebeb;
+	}
+
+	&__link {
+		color: $link;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $secondColor;
+		}
+	}
+
+	&__problem {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		margin-bottom: 0.7em;
+	}
+
+	&__help-link {
+		display: block;
+		width: 100%;
+		padding: 1em 0.55em;
+		border: 2px solid $textHover;
+		text-align: center;
+		font-size: 1.125rem;
+		color: $content;
+		transition: all 0.3s;
+
+		&:hover {
+			color: #fff;
+			background-color: $link;
+		}
+	}
+}

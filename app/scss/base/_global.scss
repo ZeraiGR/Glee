@@ -1,0 +1,98 @@
+:root {
+	font-size: 16px;
+}
+
+body {
+	min-height: 100vh;
+	@extend %rubik-400;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #fff;
+	font-size: 1.125em;
+	line-height: 1.4;
+	display: flex;
+	flex-direction: column;
+	scroll-behavior: smooth;
+}
+
+.main {
+	flex-grow: 1;
+	padding-top: 154px;
+
+	@include _1366 {
+		.partners {
+			padding-bottom: 1.5em;
+		}
+
+		.partners-solo {
+			padding-bottom: 0;
+		}
+	}
+
+	@include _979 {
+		padding-top: 125px;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+
+	&--big {
+		max-width: 1800px;
+	}
+
+	&--related {
+		max-width: 1300px;
+	}
+}
+
+.title {
+	display: block;
+	text-align: center;
+	@include adaptiv-font(36, 24);
+	@extend %dmsans-700;
+	color: $default;
+	margin-bottom: 0.555em;
+
+	&--main {
+		font-size: 0;
+		position: absolute;
+		z-index: -1;
+	}
+}
+
+.filter-btns {
+	text-align: center;
+	margin-bottom: 4.166em;
+
+	@media(max-width: 768px) {
+		margin-bottom: 2em;
+	}
+
+	&__item {
+		border: none;
+		background-color: transparent;
+		padding: 0;
+		color: #8b8b8b;
+		@extend %dmsans-700;
+		@include adaptiv-font(16, 13);
+		transition: color 0.3s;
+		cursor: pointer;
+		outline: transparent;
+
+		&+& {
+			margin-left: 1.375em;
+
+			@media(max-width: 420px) {
+				margin-left: 1em;
+			}
+		}
+
+		&:hover {
+			color: $default;
+		}
+	}
+}

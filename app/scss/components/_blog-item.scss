@@ -1,0 +1,99 @@
+@import 'components/blog-box';
+
+.blog-item {
+	display: flex;
+	max-width: 20.5em;
+	position: relative;
+	flex-direction: column;
+	background-color: #fff;
+	justify-content: space-between;
+	margin: 0 0.5em;
+
+	@include _1366 {
+		margin-bottom: 1.5em;
+	}
+
+	@include _979 {
+		max-width: 19.5em;
+	}
+
+	&__img-link {
+		max-height: 250px;
+	}
+
+	&__img {
+		height: 100%;
+	}
+
+	&__btn {
+		top: 234px;
+		left: 7.5%;
+		color: #fff;
+		overflow: hidden;
+		position: absolute;
+		font-size: 0.875rem;
+		border-radius: 1.42em;
+		padding: 0.28em 2.14em;
+		text-transform: uppercase;
+		font-family: 'Poppins-Bold';
+		border: 2px solid #a3bbc8;
+		background-color: #a3bbc8;
+		transition: all 0.2s ease-in-out;
+
+		&:before {
+			content: "";
+			top: 0;
+			width: 3em;
+			height: 100%;
+			left: -4.5em;
+			display: block;
+			transition: none;
+			position: absolute;
+			transform: skewX(-45deg) translateX(0);
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+
+		&:focus {
+			background-color: $color;
+		}
+
+		&:hover {
+			color: #fff;
+			background-color: $color;
+			border-bottom: 4px solid darken(#a3bbc8, 10%);
+			box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18),
+				0 4px 15px 0 rgba(0, 0, 0, .15);
+
+			&:before {
+				transition: all 0.5s ease-in-out;
+				transform: skewX(-45deg) translateX(13.5em);
+			}
+		}
+
+		&:active {
+			background-color: #feefe2;
+		}
+	}
+
+	&__content {
+		flex-grow: 1;
+		display: flex;
+		margin-top: 1.77em;
+		flex-direction: column;
+		padding: 0 1.5em 0 1.5em;
+		justify-content: space-between;
+	}
+
+	&__descr {
+		color: $textColor;
+		line-height: 1.25;
+		font-size: 1.125rem;
+		@extend %dmsans-500;
+		padding: 0 0.83em 0.2em 0;
+		@include cut-text(3);
+	}
+
+	&__descr-link {
+		color: inherit;
+	}
+}

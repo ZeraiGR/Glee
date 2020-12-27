@@ -12,6 +12,7 @@ const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserSync = require('browser-sync');
+const fileinclude = require('gulp-file-include');
 
 
 function browsersync() {
@@ -19,8 +20,18 @@ function browsersync() {
 		server: {
 			baseDir: 'app/'
 		},
-		notofy: false
+		notify: false
 	})
+}
+
+function htmlInclude() {
+	return src(['app/html/pages/*.html', '!app/html/components/_*.html'])
+		.pipe(fileinclude({
+			prefix: '@',
+			basepath: '@file'
+		}))
+		.pipe(dest('app'))
+		.pipe(browserSync.stream())
 }
 
 function styles() {
@@ -40,7 +51,15 @@ function styles() {
 function scripts() {
 	return src([
 			'node_modules/jquery/dist/jquery.js',
-			'app/js/main.js'
+			'node_modules/slick-carousel/slick/slick.js',
+			'node_modules/mixitup/dist/mixitup.min.js',
+			'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+			'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
+			'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+			'node_modules/rateyo/src/jquery.rateyo.js',
+			'node_modules/swiper/swiper-bundle.js',
+			'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
+			'app/js/main.js',
 		])
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
@@ -92,9 +111,12 @@ function cleanDist() {
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
-	watch(['app/**/*.html']).on('change', browserSync.reload);
+	watch(['app/html/**/*.html'], htmlInclude);
+
+	// watch(['app/html/**/*.html']).on('change', browserSync.reload);
 }
 
+exports.htmlinclude = htmlInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browserSync = browsersync;
@@ -103,4 +125,4 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.build = series(cleanDist, images, build);
 
-exports.default = parallel(styles, scripts, browsersync, watching);
+exports.default = parallel(htmlInclude, styles, scripts, browsersync, watching);

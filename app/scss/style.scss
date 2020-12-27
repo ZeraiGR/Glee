@@ -1,10 +1,30 @@
-@import 'vars';
-@import 'fonts';
-@import 'reset';
-@import 'global';
+@import 'base/base';
+@import 'components/components';
 
+// main page
+@import 'pages/home';
 
+// about page
+@import 'pages/about';
 
+// login page
+@import 'pages/login';
 
+// Conditions page
+@import 'pages/conditions';
 
-@import 'media';
+// Catalog page
+@import 'pages/catalog';
+
+// Product page
+@import 'pages/product';
+
+// Blog page
+@import 'pages/blog';
+
+// Blog one
+@import 'pages/blog-one';
+
+// Contact
+
+@import 'pages/contact';

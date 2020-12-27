@@ -1,0 +1,133 @@
+.features {
+	padding: 4.72em 0 4.4em;
+	background-color: $hoverColor;
+
+	@include _979 {
+		padding: 2em 0;
+	}
+
+	@include _768 {
+		padding: 2em 0 1em;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		@include _768 {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		display: flex;
+		color: $content;
+		text-align: center;
+		@extend %dmsans-700;
+		align-items: center;
+		flex-direction: column;
+
+		@include _768 {
+			width: 50%;
+			margin-bottom: 1em;
+		}
+
+		@include _414 {
+			width: 100%;
+		}
+	}
+
+	&__box {
+		position: relative;
+
+		.icon {
+			z-index: 2;
+			fill: $content;
+			position: relative;
+
+			@include _979 {
+				width: 50px;
+			}
+		}
+
+		&::after {
+			content: "";
+			right: 0;
+			bottom: 0;
+			width: 1.94em;
+			height: 1.94em;
+			border-radius: 50%;
+			position: absolute;
+			background-color: $textHover;
+
+			@include _979 {
+				width: 1.4em;
+				height: 1.4em;
+			}
+		}
+
+		&--graph {
+			&::after {
+				bottom: 0.3em;
+				right: -0.6em;
+
+				@include _979 {
+					bottom: 0.5em;
+					right: -0.5em;
+				}
+			}
+		}
+
+		&--car {
+			&::after {
+				right: -0.4em;
+				bottom: -0.27em;
+
+				@include _979 {
+					right: -0.5em;
+					bottom: 0.1em;
+				}
+			}
+		}
+
+		&--phone {
+			&::after {
+				right: -0.6em;
+				bottom: 0.5em;
+
+				@include _979 {
+					right: -0.3em;
+					bottom: 0.6em;
+				}
+			}
+		}
+
+		&--medal {
+			&::after {
+				right: -0.72em;
+				bottom: 0.38em;
+
+				@include _979 {
+					right: -0.1em;
+					bottom: 0.8em;
+
+				}
+			}
+		}
+	}
+
+	&__num {
+		max-width: 8.3em;
+		overflow: hidden;
+		@include adaptiv-font(36, 20);
+		text-overflow: ellipsis;
+		margin: 0.41em 0 0.13em;
+	}
+
+	&__name {
+		max-width: 19.4em;
+		@include adaptiv-font(18, 14);
+		@include cut-text(3);
+	}
+}

@@ -1,0 +1,53 @@
+.slider-big {
+
+	&__list {
+		max-width: 385px;
+
+		@include _414 {
+			max-width: 285px;
+		}
+	}
+
+	&__item {
+		max-width: 385px;
+		height: 530px;
+
+		@include _768 {
+			height: 415px;
+		}
+
+		@include _414 {
+			height: 315px;
+		}
+	}
+
+	&__img-box {
+		border: 2px solid #f2f2f2;
+		width: 375px;
+		height: 526px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+
+		@include _768 {
+			height: 400px;
+		}
+
+		@include _414 {
+			height: 300px;
+			width: 275px;
+		}
+
+		@include _380 {
+			height: 300px;
+			width: 281px;
+		}
+	}
+
+
+}
+
+.slider-big.swiper-container {
+	margin-bottom: 1em;
+}

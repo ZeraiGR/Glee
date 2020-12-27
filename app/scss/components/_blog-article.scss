@@ -1,0 +1,168 @@
+@import 'components/blog-box';
+
+.blog-article {
+	margin-bottom: 45px;
+
+	&__info {
+		padding-top: 35px;
+
+		@include _979 {
+			padding-top: 15px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 25px;
+		text-align: left;
+		@extend %rubik-400;
+
+		@include _979 {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__link {
+		font-family: inherit;
+		font-size: inherit;
+		color: #333;
+	}
+
+	&__text {
+		color: $content;
+		font-size: 1rem;
+		margin-bottom: 32px;
+		@include adaptiv-font(16, 14);
+
+		@include _979 {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__button {
+		background-color: transparent;
+		color: $textHover;
+		border: 1px solid $textHover;
+		border-radius: 0;
+
+		.icon {
+			fill: $textHover;
+			transition: fill 0.3s;
+		}
+
+		&:hover {
+			.icon {
+				fill: #fff;
+			}
+		}
+	}
+}
+
+.search {
+	height: 43px;
+	margin-bottom: 55px;
+
+	@include _768 {
+		margin-bottom: 25px;
+	}
+
+	&__form {
+		display: flex;
+		height: 43px;
+	}
+
+	&__input {
+		border: 1px solid #edf1f4;
+		outline: transparent;
+		padding: 3px;
+
+		@include _768 {
+			max-width: 200px;
+			width: 100%;
+		}
+	}
+
+	&__btn {
+		width: 48px;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		margin-left: -3px;
+		cursor: pointer;
+		outline: transparent;
+	}
+}
+
+.recent-post {
+	@include _768 {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	&__title {
+		position: relative;
+		display: inline-block;
+		padding-right: 55px;
+		text-transform: uppercase;
+		font-size: 1.125rem;
+		margin-bottom: 1.38em;
+		@extend %dmsans-700;
+		color: $content;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 38px;
+			height: 3px;
+			background-color: #a3bbc8;
+		}
+	}
+
+	&__item {
+		display: flex;
+		margin-bottom: 20px;
+	}
+
+	&__img-box {
+		min-width: 71px;
+		margin-right: 18px;
+	}
+
+	&__img {
+		width: 71px;
+		height: 71px;
+		object-fit: cover;
+	}
+
+	&__link {
+		display: block;
+		font-size: 14px;
+		color: #333;
+		line-height: 1.4;
+		margin-bottom: 10px;
+	}
+
+	&__time {
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #9a9a9a;
+		position: relative;
+		padding-left: 18px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 12px;
+			height: 13px;
+			background-image: url(../images/icons/calendar.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+			left: 0;
+		}
+	}
+}

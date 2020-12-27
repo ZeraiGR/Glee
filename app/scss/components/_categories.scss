@@ -1,0 +1,25 @@
+.categories {
+	.mixitup-control-active {
+		color: $default;
+	}
+
+	&__products {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -0.84em 10.27em;
+
+		@include _1366 {
+			margin: 0 -0.84em 2em;
+		}
+	}
+
+	&__products-more {
+		display: flex;
+		justify-content: space-between;
+
+		@include _768 {
+			flex-direction: column;
+		}
+	}
+}

@@ -1,0 +1,42 @@
+.partners {
+	height: 15em;
+	background-color: #fef7f0;
+	display: flex;
+	align-items: center;
+
+	@include _979 {
+		height: 8em;
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__item {
+		max-width: 8.3em;
+		max-height: 5.5em;
+		padding: 0 15px;
+		overflow: hidden;
+	}
+
+	&__images {
+		object-fit: cover;
+		margin: 0 auto;
+	}
+
+	.slick-list {
+		width: 100%;
+	}
+
+	.slick-track {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.slick-slide {
+		text-align: center;
+	}
+}

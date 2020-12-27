@@ -1,0 +1,40 @@
+.post-box {
+	position: relative;
+
+	&__img-wrapper {
+		overflow: hidden;
+	}
+
+	&__img {
+		max-width: 870px;
+		width: 100%;
+		object-fit: cover;
+		height: 500px;
+
+		@include _979 {
+			height: 350px;
+		}
+
+		@include _414 {
+			height: 250px;
+		}
+	}
+
+	.blog-box {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		border-top: none;
+		background-color: $textHover;
+		padding: 28px 22px;
+
+		&__date,
+		&__author {
+			color: #fff;
+		}
+
+		.icon {
+			fill: #fff;
+		}
+	}
+}

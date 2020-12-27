@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Glee | Product</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	@include('../components/_header.html')
+
+	<main class="main">
+		@include('../components/_head.html', {
+		"title": "Product Detalis"
+		})
+
+		<section class="delalis">
+			<div class="container">
+				<div class="delalis__inner">
+					<div class="delalis-product">
+						<div class="delalis-product__sliders">
+							<div class="slider-mini swiper-container">
+								<div class="slider-mini__list swiper-wrapper">
+									<div class="slider-mini__item swiper-slide">
+										<div class="slider-mini__img-box">
+											<img class="slider-mini__img" src="images/content/products/big-slide.png"
+												alt="product images">
+										</div>
+									</div>
+									<div class="slider-mini__item swiper-slide">
+										<div class="slider-mini__img-box">
+											<img class="slider-mini__img" src="images/content/products/big-slide-2.png"
+												alt="product images">
+										</div>
+									</div>
+									<div class="slider-mini__item swiper-slide">
+										<div class="slider-mini__img-box">
+											<img class="slider-mini__img" src="images/content/products/big-slide-3.png"
+												alt="product images">
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="slider-big swiper-container">
+								<div class="slider-big__list swiper-wrapper">
+									<div class="slider-big__item swiper-slide">
+										<div class="slider-big__img-box">
+											<img class="slider-big__img" src="images/content/products/big-slide.png"
+												alt="product images">
+										</div>
+									</div>
+									<div class="slider-big__item swiper-slide">
+										<div class="slider-big__img-box">
+											<img class="slider-big__img" src="images/content/products/big-slide-2.png"
+												alt="product images">
+										</div>
+									</div>
+									<div class="slider-big__item swiper-slide">
+										<div class="slider-big__img-box">
+											<img class="slider-big__img" src="images/content/products/big-slide-3.png"
+												alt="product images">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="delalis-product__info">
+							<h2 class="delalis-product__info-title">Pendant lamp</h2>
+							<div class="delalis-product__star" data-rateyo-rating="4"></div>
+							<div class="delalis-product__price">23$</div>
+							<p class="delalis-product__text">consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+								labore et
+								dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+								aliquip ex ea
+								commodo </p>
+							<form class="delalis-product__form" action="#">
+								<input class="delalis-product__counter" type="number" min="1" value="1">
+								<button class="delalis-product__btn" type="submit">Add to cart</button>
+							</form>
+							<div class="delalis-product__addon">
+								<span class="delalis-product__sku">SKU: 014</span>
+								<span class="delalis-product__category">Category: Lights</span>
+								<span class="delalis-product__tag">Tag: Decorative</span>
+							</div>
+						</div>
+					</div>
+					<div class="tabs">
+						<div class="tabs__top">
+							<a class="tabs__top-item tabs__top-item--active" href="#tab-1">Description</a>
+							<a class="tabs__top-item" href="#tab-2">Additional information</a>
+							<a class="tabs__top-item" href="#tab-3">Reviews <span>(2)</span></a>
+						</div>
+						<div class="tabs__content">
+							<div class="tabs__content-item tabs__content-item--active" id="tab-1">
+								<div class="tabs__content-text">
+									<p>consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+										aliqua. Ut enim ad
+										minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+										Lorem
+										ipsum dolor sit
+										amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+										magna aliqua. Ut
+										enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+										commodo
+										consequat.</p>
+								</div>
+							</div>
+							<div class="tabs__content-item" id="tab-2">content-2</div>
+							<div class="tabs__content-item" id="tab-3">content-3</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- <section class="related">
+			<div class="container container--related">
+				<div class="related__inner">
+					<div class="related__top">
+						<h2 class="related__title title">Related products</h2>
+					</div>
+					<div class="related__slider">
+						<div class="related__slider-list">
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/2.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+
+								<h3 class="product-card__name">Wooden chair</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="categories__img" src="images/content/products/3.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+
+								<h3 class="product-card__name">White chair</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card" href="#">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/4.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+								<h3 class="product-card__name">Retro table</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/5.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+
+								<h3 class="product-card__name">Wooden radio</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/6.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+
+								<h3 class="product-card__name">Wooden chair</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/7.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+
+								<h3 class="product-card__name">White chair</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+
+							<article class="product-card">
+								<div class="product-card__box">
+									<img class="product-card__img" src="images/content/products/8.png" alt="product item">
+								</div>
+								<div class="product-card__hover-links">
+									<a class="product-card__link" href="#">
+										<svg width="20" height="20" class="icon icon-search">
+											<use xlink:href="images/icons/icons.svg#search"></use>
+										</svg>
+									</a>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="20" class="icon icon-cart">
+											<use xlink:href="images/icons/icons.svg#cart"></use>
+										</svg>
+									</button>
+									<button class="product-card__link" type="button">
+										<svg width="22" height="18" class="icon icon-heart">
+											<use xlink:href="images/icons/icons.svg#heart"></use>
+										</svg>
+									</button>
+								</div>
+								<h3 class="product-card__name">Retro table</h3>
+								<span class="product-card__price">$29.00</span>
+							</article>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		@include('../components/_blog.html')
+		@include('../components/_partners.html')
+
+	</main>
+
+	@include('../components/_footer.html')
+
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

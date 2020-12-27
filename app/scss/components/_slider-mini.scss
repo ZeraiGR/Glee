@@ -1,0 +1,101 @@
+.slider-mini {
+	margin-right: 23px;
+
+	@include _979 {
+		margin-right: auto;
+	}
+
+	&__list {
+		max-width: 140px;
+
+		@include _979 {
+			max-width: 100%;
+		}
+	}
+
+	.swiper-slide {
+		width: 160px;
+
+		@include _768 {
+			width: 120px;
+		}
+
+		@include _414 {
+			width: 115px;
+		}
+
+		@include _380 {
+			width: 100px;
+		}
+	}
+
+	&__item {
+		min-width: 135px;
+		max-height: 160px;
+		margin-bottom: 23px;
+
+		@include _768 {
+			min-width: 100px;
+			max-height: 125px;
+			margin-bottom: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.swiper-slide-thumb-active {
+		opacity: 0.8;
+	}
+
+	&__img-box {
+		width: 135px;
+		height: 160px;
+		border: 2px solid #f2f2f2;
+		cursor: pointer;
+
+		@include _979 {
+			margin: 0 auto;
+		}
+
+		@include _768 {
+			width: 100px;
+			height: 125px;
+		}
+
+		@include _380 {
+			width: 80px;
+			height: 105px;
+		}
+	}
+
+	&__img {
+		object-fit: cover;
+		height: 100%;
+		margin: 0 auto;
+	}
+}
+
+@include _979 {
+	.swiper-container {
+		overflow: visible;
+	}
+
+	.swiper-container-vertical>.swiper-wrapper {
+		flex-direction: row;
+		height: 165px;
+	}
+}
+
+@include _768 {
+	.swiper-container-vertical>.swiper-wrapper {
+		margin-bottom: -40px;
+	}
+}
+
+@include _380 {
+	.swiper-container-vertical>.swiper-wrapper {
+		margin-bottom: -60px;
+	}
+}
